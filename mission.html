@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Mission - KraftIQ | Transforming Ideas into Reality</title>
+    <meta name="description" content="Discover KraftIQ's mission to transform innovative ideas into practical technology solutions that drive business growth and create lasting impact.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        secondary: {
+                            50: '#fafafa',
+                            100: '#f4f4f5',
+                            200: '#e4e4e7',
+                            300: '#d4d4d8',
+                            400: '#a1a1aa',
+                            500: '#71717a',
+                            600: '#52525b',
+                            700: '#3f3f46',
+                            800: '#27272a',
+                            900: '#18181b',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-text-secondary {
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .font-archivo-black { font-family: 'Archivo Black', sans-serif; }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 25%, #2563eb 50%, #3b82f6 75%, #60a5fa 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+
+<body class="font-sans text-neutral-900">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-neutral-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="text-3xl sm:text-4xl font-bold font-archivo-black">
+                        <span class="text-black">Kraft</span><span class="text-orange-400">I</span><span class="text-orange-400">Q</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">Home</a>
+                    <a href="index.html#about" class="text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">About</a>
+                    <a href="vision.html" class="text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">Vision</a>
+                    <a href="mission.html" class="text-primary-600 font-medium">Mission</a>
+                    <a href="index.html#services" class="text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">Services</a>
+                    <a href="index.html#portfolio" class="text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">Portfolio</a>
+                    <a href="index.html#contact" class="text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">Contact</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="index.html#contact" class="bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-700 transition-all duration-300">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-neutral-700" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu md:hidden bg-white/95 backdrop-blur-lg hidden" id="mobile-menu">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Home</a>
+                <a href="index.html#about" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">About</a>
+                <a href="vision.html" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Vision</a>
+                <a href="mission.html" class="block text-primary-600 font-medium py-3">Mission</a>
+                <a href="index.html#services" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Services</a>
+                <a href="index.html#portfolio" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Portfolio</a>
+                <a href="index.html#contact" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mission Hero -->
+    <section class="hero-gradient pt-32 pb-20 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8">
+                <i class="fas fa-bullseye text-white mr-3"></i>
+                <span class="text-white font-medium">Our Mission</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-8">
+                Our <span class="gradient-text-secondary">Mission</span>
+            </h1>
+            <div class="max-w-4xl mx-auto">
+                <p class="text-2xl md:text-3xl font-light leading-relaxed mb-8">
+                    To empower businesses and educational institutions with innovative technology solutions that drive growth, efficiency, and success in the digital era.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Pillars -->
+    <section class="py-20 bg-neutral-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-6">
+                    Our Mission <span class="gradient-text">Pillars</span>
+                </h2>
+                <p class="text-lg text-neutral-600 max-w-3xl mx-auto">
+                    Four fundamental principles that guide our approach to technology and innovation.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Transform -->
+                <div class="card-hover bg-white rounded-2xl p-3 shadow-lg text-center">
+                    <div class="w-10 h-10 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                        <i class="fas fa-magic text-white text-base"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-neutral-900 mb-1">Transform</h3>
+                    <p class="text-neutral-600 text-xs">
+                        Converting complex challenges into elegant, user-friendly solutions.
+                    </p>
+                </div>
+                
+                <!-- Empower -->
+                <div class="card-hover bg-white rounded-2xl p-3 shadow-lg text-center">
+                    <div class="w-10 h-10 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                        <i class="fas fa-rocket text-white text-base"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-neutral-900 mb-1">Empower</h3>
+                    <p class="text-neutral-600 text-xs">
+                        Enabling businesses to achieve their full potential through technology.
+                    </p>
+                </div>
+                
+                <!-- Innovate -->
+                <div class="card-hover bg-white rounded-2xl p-3 shadow-lg text-center">
+                    <div class="w-10 h-10 bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                        <i class="fas fa-lightbulb text-white text-base"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-neutral-900 mb-1">Innovate</h3>
+                    <p class="text-neutral-600 text-xs">
+                        Pushing boundaries with cutting-edge technologies and creative solutions.
+                    </p>
+                </div>
+                
+                <!-- Impact -->
+                <div class="card-hover bg-white rounded-2xl p-3 shadow-lg text-center">
+                    <div class="w-10 h-10 bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                        <i class="fas fa-globe text-white text-base"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-neutral-900 mb-1">Impact</h3>
+                    <p class="text-neutral-600 text-xs">
+                        Creating meaningful change that benefits businesses and society.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Deliver -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-flex items-center bg-primary-50 rounded-full px-4 py-2 mb-6">
+                        <i class="fas fa-cogs text-primary-500 mr-2"></i>
+                        <span class="text-primary-700 font-medium text-sm">Our Approach</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-6">
+                        How We Deliver <span class="gradient-text">Excellence</span>
+                    </h2>
+                    <p class="text-lg text-neutral-600 mb-8">
+                        Our mission-driven approach ensures every project delivers maximum value and lasting impact.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center mt-1">
+                                <span class="text-white text-sm font-bold">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-neutral-900 mb-2">Deep Understanding</h4>
+                                <p class="text-neutral-600">We immerse ourselves in your business to understand unique challenges and opportunities.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center mt-1">
+                                <span class="text-white text-sm font-bold">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-neutral-900 mb-2">Strategic Innovation</h4>
+                                <p class="text-neutral-600">We apply cutting-edge technologies strategically to maximize business impact.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center mt-1">
+                                <span class="text-white text-sm font-bold">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-neutral-900 mb-2">Continuous Partnership</h4>
+                                <p class="text-neutral-600">We maintain long-term relationships, evolving solutions as your business grows.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="relative z-10">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Team Collaboration" 
+                             class="rounded-2xl shadow-2xl w-full h-96 object-cover">
+                    </div>
+                    <div class="absolute -top-6 -left-6 w-full h-full bg-gradient-to-r from-primary-500/20 to-primary-600/20 rounded-2xl -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-neutral-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-900/20 to-neutral-900/20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">
+                Ready to Transform Your Ideas?
+            </h2>
+            <p class="text-xl text-neutral-300 mb-8 max-w-3xl mx-auto">
+                Let's work together to turn your vision into reality. Our mission-driven approach ensures 
+                your success is our priority.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact" class="bg-primary-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-primary-600 transition-all duration-300">
+                    Start Your Journey
+                </a>
+                <a href="vision.html" class="glass text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300">
+                    Explore Our Vision
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <span class="text-2xl font-bold font-archivo-black">
+                        <span class="text-black">Kraft</span><span class="text-orange-400">I</span><span class="text-orange-400">Q</span>
+                    </span>
+                </div>
+                <div class="text-neutral-400 text-sm">
+                    © 2024 KraftIQ. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.className = 'fas fa-bars text-xl';
+            } else {
+                icon.className = 'fas fa-times text-xl';
+            }
+        });
+    </script>
+</body>
+</html>

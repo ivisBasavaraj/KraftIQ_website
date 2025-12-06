@@ -1,0 +1,76 @@
+<footer class="bg-neutral-900 text-white">
+    <div class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center -mt-24 mb-0">
+                        <img src="assets/KraftIQLogo.png" alt="KraftIQ Logo" class="w-40 md:w-48 lg:w-56 h-auto">
+                    </div>
+                    <p class="text-neutral-300 mb-6 max-w-md">
+                        Empowering innovation through cutting-edge technology solutions.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-neutral-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-neutral-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="index.html#services" class="text-neutral-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="portfolio.html" class="text-neutral-300 hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="index.html#contact" class="text-neutral-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="text-neutral-300">+91 7019293597</li>
+                        <li class="text-neutral-300">basavarajkasbi@gmail.com</li>
+                        <li class="text-neutral-300">EWS109 NAVAGAR KARNATAKA CIRCLE HUBLI</li>
+                        <li class="text-neutral-300">Govindaraja Nagar Ward, PF Layout, Vijayanagar, Bengaluru, Karnataka 560040</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="border-t border-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="text-center text-neutral-400 text-sm">
+                © 2024 KraftIQ. All rights reserved.
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Load footer
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.className = 'fas fa-bars text-xl';
+                } else {
+                    icon.className = 'fas fa-times text-xl';
+                }
+            });
+            
+            // Close mobile menu when clicking on nav links
+            document.querySelectorAll('.mobile-menu .nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.className = 'fas fa-bars text-xl';
+                });
+            });
+        }
+    });
+</script>

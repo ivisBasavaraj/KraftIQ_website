@@ -1,0 +1,25 @@
+{
+    "name": "KraftIQ - Empowering Innovation Through Technology",
+    "short_name": "KraftIQ",
+    "description": "Transform your ideas into reality with cutting-edge technology solutions. Expert software development, AI/ML, and digital transformation services.",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#0ea5e9",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/",
+    "orientation": "portrait-primary",
+    "categories": ["business", "technology", "productivity"],
+    "lang": "en-US"
+}
