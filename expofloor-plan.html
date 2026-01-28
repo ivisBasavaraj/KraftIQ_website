@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
     <title>Expofloor Plan - KraftIQ | 2D & 3D Floor Planning Solution</title>
+    <meta name="title" content="Expofloor Plan - KraftIQ | 2D & 3D Floor Planning Solution">
     <meta name="description" content="Create stunning 2D and 3D floor plans for exhibitions and events with KraftIQ's Expofloor Plan. Interactive design tools for event planners and venue managers.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -18,39 +24,37 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         primary: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            200: '#bfdbfe',
-                            300: '#93c5fd',
-                            400: '#60a5fa',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#1e3a8a',
+                            DEFAULT: '#121217',
+                            light: '#1C1C22',
                         },
-                        neutral: {
-                            50: '#ffffff',
-                            100: '#f8fafc',
-                            200: '#f1f5f9',
-                            300: '#e2e8f0',
-                            400: '#cbd5e1',
-                            500: '#94a3b8',
-                            600: '#64748b',
-                            700: '#475569',
-                            800: '#334155',
-                            900: '#1e293b',
+                        accent: {
+                            DEFAULT: '#2B2B31',
+                            grey: '#F6F7F9',
+                            muted: '#6B7280',
                         }
                     },
                     fontFamily: {
                         'sans': ['Inter', 'system-ui', 'sans-serif'],
                         'serif': ['Playfair Display', 'serif'],
+                    },
+                    borderRadius: {
+                        'xl': '18px',
+                        '2xl': '22px',
+                        '3xl': '32px',
+                    },
+                    boxShadow: {
+                        'premium': '0 15px 40px rgba(0,0,0,0.08)',
+                        'card-float': '0 30px 60px rgba(0,0,0,0.12)',
                     }
                 }
             }
@@ -58,170 +62,215 @@
     </script>
     
     <style>
-        .font-archivo-black { font-family: 'Archivo Black', sans-serif; }
-        .gradient-text {
-            background: linear-gradient(135deg, #3b82f6, #60a5fa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        :root {
+            --rich-black: #121217;
+            --soft-grey: #F6F7F9;
+            --border-light: rgba(0, 0, 0, 0.08);
+            --border-dark: rgba(255, 255, 255, 0.1);
         }
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+        body {
+            background-color: white;
+            color: var(--rich-black);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+
+        .premium-shadow { box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+        .premium-shadow-large { box-shadow: 0 30px 60px rgba(0,0,0,0.12); }
+        
+        /* Navigation */
+        .nav-sticky {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        /* Compact Section Spacing */
+        .section-padding { padding: 80px 0; }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-up { opacity: 0; }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #121217 0%, #1C1C22 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
     </style>
 </head>
 
-<body class="font-sans text-neutral-900">
+<body class="font-sans">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-neutral-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 sm:h-20">
-                <div class="flex items-center">
-                    <a href="index.html" class="text-xl sm:text-2xl font-bold font-archivo-black">
-                        <span class="text-neutral-900">Kraft</span><span class="text-blue-500">I</span><span class="text-blue-500">Q</span>
-                    </a>
-                </div>
-                
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">Home</a>
-                    <a href="about.html" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">About Us</a>
-                    <a href="index.html#services" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">Services</a>
-                    <a href="products.html" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">Products</a>
-                    <a href="index.html#contact" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">Contact</a>
-                </div>
-                
-                <button class="md:hidden text-neutral-700" id="mobile-menu-btn">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
+    <nav class="fixed top-0 w-full z-50 nav-sticky" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="assets/KraftIQLogo.png" alt="KraftIQ Logo" class="h-20 w-auto">
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Home</a>
+                <a href="about.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">About</a>
+                <a href="services.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Services</a>
+                <a href="products.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Products</a>
+                <a href="index.html#contact" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Contact</a>
             </div>
-        </div>
-        
-        <div class="mobile-menu md:hidden bg-white/95 backdrop-blur-lg hidden" id="mobile-menu">
-            <div class="px-4 py-6 space-y-4">
-                <a href="index.html" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Home</a>
-                <a href="about.html" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">About Us</a>
-                <a href="index.html#services" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Services</a>
-                <a href="products.html" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Products</a>
-                <a href="index.html#contact" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Contact</a>
-            </div>
+            
+            <a href="index.html#contact" class="bg-primary text-white px-6 py-2 rounded-full text-[13px] font-bold hover:scale-105 transition-transform">
+                Get Started
+            </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-neutral-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <div class="inline-flex items-center bg-primary-100 rounded-full px-4 py-2 mb-6">
-                    <i class="fas fa-drafting-compass text-primary-600 mr-2"></i>
-                    <span class="text-primary-700 font-medium text-sm">Floor Planning Solution</span>
+    <section class="hero-gradient pt-32 pb-24 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="animate-up">
+                    <div class="inline-flex items-center bg-white/5 backdrop-blur-sm rounded-full px-5 py-2 mb-8 border border-white/10">
+                        <i class="fas fa-drafting-compass text-white/80 mr-3 text-sm"></i>
+                        <span class="text-sm font-medium tracking-wide">FLOOR PLANNING SOLUTION</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight">
+                        Expofloor <span class="text-white/80">Plan</span>
+                    </h1>
+                    <p class="text-xl font-light leading-relaxed text-gray-300 mb-10">
+                        Create stunning 2D and 3D floor plans for exhibitions and events with our intuitive design tools. Perfect for event planners and venue managers.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#demo" class="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-opacity-90 transition-all text-center">
+                            Try Demo
+                        </a>
+                        <a href="expofloor-case-studies.html" class="border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/5 transition-all text-center">
+                            View Case Studies
+                        </a>
+                    </div>
                 </div>
-                <h1 class="text-4xl md:text-6xl font-serif font-bold text-neutral-900 mb-6">
-                    <span class="gradient-text">Expofloor Plan</span>
-                </h1>
-                <p class="text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
-                    Create stunning 2D and 3D floor plans for exhibitions and events with our intuitive design tools. Perfect for event planners and venue managers.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#demo" class="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-                        Try Demo
-                    </a>
-                    <a href="expofloor-case-studies.html" class="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors">
-                        View Case Studies
-                    </a>
+                <div class="animate-up relative hidden lg:block">
+                    <div class="relative z-10 rounded-3xl overflow-hidden premium-shadow-large border border-white/10">
+                        <img src="assets/Floorplan.jpeg" alt="Expofloor Plan Preview" class="w-full h-auto">
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-white/5 rounded-full blur-3xl -z-10"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-20 bg-white">
+    <section class="section-padding bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 mb-6">
-                    Powerful <span class="gradient-text">Features</span>
+            <div class="animate-up text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
+                    Powerful Features
                 </h2>
-                <p class="text-lg text-neutral-600 max-w-3xl mx-auto">
-                    Everything you need to create professional floor plans and manage events efficiently
+                <p class="text-lg text-accent-muted max-w-2xl mx-auto">
+                    Everything you need to create professional floor plans and manage events efficiently in one integrated platform.
                 </p>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-neutral-100">
-                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-cube text-white text-2xl"></i>
+                <!-- feature 1 -->
+                <div class="animate-up bg-accent-grey rounded-3xl p-8 premium-shadow hover:translate-y-[-8px] transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-cube text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-neutral-900 mb-4">3D Visualization</h3>
-                    <p class="text-neutral-600">Create realistic 3D renders of your floor plans with lighting, textures, and interactive walkthroughs.</p>
+                    <h3 class="text-xl font-bold text-primary mb-4">3D Visualization</h3>
+                    <p class="text-accent-muted leading-relaxed">
+                        Create realistic 3D renders of your floor plans with lighting, textures, and interactive walkthroughs for clients.
+                    </p>
                 </div>
                 
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-neutral-100">
-                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-vector-square text-white text-2xl"></i>
+                <!-- feature 2 -->
+                <div class="animate-up bg-accent-grey rounded-3xl p-8 premium-shadow hover:translate-y-[-8px] transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-vector-square text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-neutral-900 mb-4">2D Floor Plans</h3>
-                    <p class="text-neutral-600">Design precise 2D layouts with measurements, booth placements, and technical specifications.</p>
+                    <h3 class="text-xl font-bold text-primary mb-4">2D Floor Plans</h3>
+                    <p class="text-accent-muted leading-relaxed">
+                        Design precise 2D layouts with exact measurements, booth placements, and comprehensive technical specifications.
+                    </p>
                 </div>
                 
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-neutral-100">
-                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-mouse-pointer text-white text-2xl"></i>
+                <!-- feature 3 -->
+                <div class="animate-up bg-accent-grey rounded-3xl p-8 premium-shadow hover:translate-y-[-8px] transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-mouse-pointer text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-neutral-900 mb-4">Drag & Drop Interface</h3>
-                    <p class="text-neutral-600">Intuitive drag-and-drop tools make it easy to place booths, furniture, and decorations.</p>
+                    <h3 class="text-xl font-bold text-primary mb-4">Drag & Drop Interface</h3>
+                    <p class="text-accent-muted leading-relaxed">
+                        Intuitive drag-and-drop tools make it easy to place booths, furniture, and decorations without technical training.
+                    </p>
                 </div>
                 
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-neutral-100">
-                    <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-share-alt text-white text-2xl"></i>
+                <!-- feature 4 -->
+                <div class="animate-up bg-accent-grey rounded-3xl p-8 premium-shadow hover:translate-y-[-8px] transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-share-alt text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-neutral-900 mb-4">Export & Share</h3>
-                    <p class="text-neutral-600">Export to PDF, PNG, or share interactive links with clients and stakeholders.</p>
+                    <h3 class="text-xl font-bold text-primary mb-4">Export & Share</h3>
+                    <p class="text-accent-muted leading-relaxed">
+                        Export your designs to high-resolution PDF, PNG, or share interactive web links with stakeholders and partners.
+                    </p>
                 </div>
                 
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-neutral-100">
-                    <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                <!-- feature 5 -->
+                <div class="animate-up bg-accent-grey rounded-3xl p-8 premium-shadow hover:translate-y-[-8px] transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-mobile-alt text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-neutral-900 mb-4">Mobile Responsive</h3>
-                    <p class="text-neutral-600">Access and edit your floor plans on any device with our responsive design.</p>
+                    <h3 class="text-xl font-bold text-primary mb-4">Mobile Responsive</h3>
+                    <p class="text-accent-muted leading-relaxed">
+                        Access, view, and make quick edits to your floor plans on any device while on the event floor.
+                    </p>
                 </div>
                 
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-neutral-100">
-                    <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-users text-white text-2xl"></i>
+                <!-- feature 6 -->
+                <div class="animate-up bg-accent-grey rounded-3xl p-8 premium-shadow hover:translate-y-[-8px] transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-users text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-neutral-900 mb-4">Team Collaboration</h3>
-                    <p class="text-neutral-600">Work together with your team in real-time with cloud-based collaboration tools.</p>
+                    <h3 class="text-xl font-bold text-primary mb-4">Team Collaboration</h3>
+                    <p class="text-accent-muted leading-relaxed">
+                        Work together with your team in real-time with cloud-based collaboration tools and version history tracking.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Demo Section -->
-    <section id="demo" class="py-20 bg-gradient-to-br from-primary-50 to-blue-50">
+    <section id="demo" class="section-padding bg-accent-grey">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 mb-6">
-                    See It In <span class="gradient-text">Action</span>
+            <div class="animate-up text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
+                    See It In Action
                 </h2>
-                <p class="text-lg text-neutral-600 max-w-3xl mx-auto">
-                    Experience the power of Expofloor Plan with our interactive demo
+                <p class="text-lg text-accent-muted max-w-2xl mx-auto">
+                    Experience the precision and ease of Expofloor Plan with our interactive interface preview.
                 </p>
             </div>
             
-            <div class="bg-white rounded-2xl p-8 shadow-xl">
-                <div class="bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-xl aspect-video flex items-center justify-center">
-                    <div class="text-center">
-                        <div class="w-24 h-24 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-play text-primary-600 text-3xl ml-1"></i>
+            <div class="animate-up bg-white rounded-3xl p-10 premium-shadow-large">
+                <div class="bg-primary rounded-2xl aspect-video flex items-center justify-center relative overflow-hidden group">
+                    <img src="assets/Floorplan.jpeg" alt="Floorplan Demo" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700">
+                    <div class="relative z-10 text-center">
+                        <div class="w-24 h-24 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-8 border border-white/20 hover:scale-110 transition-transform cursor-pointer">
+                            <i class="fas fa-play text-white text-3xl ml-1"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-neutral-900 mb-4">Interactive Demo</h3>
-                        <p class="text-neutral-600 mb-6">Click to explore our floor planning interface</p>
-                        <button class="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+                        <h3 class="text-3xl font-bold text-white mb-4 tracking-tight">Interactive Demo</h3>
+                        <p class="text-white/70 mb-8 max-w-md mx-auto">Click to explore our industry-leading floor planning interface and see how easy design can be.</p>
+                        <button class="bg-white text-primary px-10 py-4 rounded-full font-bold hover:bg-opacity-90 transition-all">
                             Launch Demo
                         </button>
                     </div>
@@ -231,95 +280,95 @@
     </section>
 
     <!-- Benefits Section -->
-    <section class="py-20 bg-white">
+    <section class="section-padding bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 mb-6">
-                        Why Choose <span class="gradient-text">Expofloor Plan?</span>
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="animate-up">
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-primary mb-8 leading-tight">
+                        Why Choose Expofloor Plan?
                     </h2>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                <i class="fas fa-clock text-primary-600"></i>
+                    <div class="space-y-8">
+                        <div class="flex items-start group">
+                            <div class="w-12 h-12 bg-primary text-white rounded-2xl flex items-center justify-center mr-6 flex-shrink-0 group-hover:rotate-12 transition-transform">
+                                <i class="fas fa-clock"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-neutral-900 mb-2">Save 75% Planning Time</h4>
-                                <p class="text-neutral-600">Automated tools and templates reduce planning time from weeks to hours.</p>
+                                <h4 class="text-xl font-bold text-primary mb-2">Save 75% Planning Time</h4>
+                                <p class="text-accent-muted leading-relaxed">Automated tools and smart templates reduce floor planning time from weeks to just a few hours.</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                <i class="fas fa-dollar-sign text-green-600"></i>
+                        <div class="flex items-start group">
+                            <div class="w-12 h-12 bg-primary text-white rounded-2xl flex items-center justify-center mr-6 flex-shrink-0 group-hover:rotate-12 transition-transform">
+                                <i class="fas fa-chart-line"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-neutral-900 mb-2">Increase Revenue by 45%</h4>
-                                <p class="text-neutral-600">Better space utilization and client satisfaction lead to more bookings.</p>
+                                <h4 class="text-xl font-bold text-primary mb-2">Increase Revenue by 45%</h4>
+                                <p class="text-accent-muted leading-relaxed">Better space utilization and premium client visualization lead to more bookings and higher value contracts.</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                <i class="fas fa-heart text-blue-600"></i>
+                        <div class="flex items-start group">
+                            <div class="w-12 h-12 bg-primary text-white rounded-2xl flex items-center justify-center mr-6 flex-shrink-0 group-hover:rotate-12 transition-transform">
+                                <i class="fas fa-heart"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-neutral-900 mb-2">95% Client Satisfaction</h4>
-                                <p class="text-neutral-600">Visual previews eliminate surprises and ensure client expectations are met.</p>
+                                <h4 class="text-xl font-bold text-primary mb-2">95% Client Satisfaction</h4>
+                                <p class="text-accent-muted leading-relaxed">3D visual previews eliminate surprises during setup and ensure all client expectations are perfectly met.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="bg-gradient-to-br from-primary-50 to-blue-50 rounded-2xl p-8">
-                    <div class="bg-white rounded-xl p-6 shadow-lg mb-6">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
-                                <i class="fas fa-quote-left text-primary-600"></i>
+                <div class="animate-up bg-accent-grey rounded-3xl p-10 border border-black/5 relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="flex items-center mb-8">
+                            <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mr-6">
+                                <i class="fas fa-quote-left text-2xl"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-neutral-900">Sarah Johnson</div>
-                                <div class="text-sm text-neutral-600">Event Manager</div>
+                                <h4 class="text-xl font-bold text-primary">Industry Standard</h4>
+                                <div class="flex text-amber-500 mt-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
                             </div>
                         </div>
-                        <p class="text-neutral-700 italic">
-                            "Expofloor Plan has revolutionized how we plan events. Our clients love seeing their vision come to life before the actual event."
+                        <p class="text-xl font-serif italic text-primary leading-relaxed mb-8">
+                            "Expofloor Plan has completely transformed how we pitch and plan our annual exhibitions. The 3D walkthroughs are a game changer for our sales team."
                         </p>
-                    </div>
-                    
-                    <div class="grid grid-cols-3 gap-4">
-                        <div class="text-center p-4 bg-white rounded-lg shadow">
-                            <div class="text-2xl font-bold text-primary-600">500+</div>
-                            <div class="text-sm text-neutral-600">Events Planned</div>
-                        </div>
-                        <div class="text-center p-4 bg-white rounded-lg shadow">
-                            <div class="text-2xl font-bold text-green-600">98%</div>
-                            <div class="text-sm text-neutral-600">Success Rate</div>
-                        </div>
-                        <div class="text-center p-4 bg-white rounded-lg shadow">
-                            <div class="text-2xl font-bold text-blue-600">24/7</div>
-                            <div class="text-sm text-neutral-600">Support</div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full mr-4"></div>
+                            <div>
+                                <div class="font-bold text-primary">James Wilson</div>
+                                <div class="text-accent-muted text-sm tracking-wide">Event Director, Global Expos</div>
+                            </div>
                         </div>
                     </div>
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 bg-primary-600">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
+    <!-- Call to Action -->
+    <section class="section-padding bg-primary text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="animate-up text-4xl md:text-5xl font-serif font-bold mb-8">
                 Ready to Transform Your Event Planning?
             </h2>
-            <p class="text-xl text-primary-100 mb-8">
-                Join thousands of event professionals who have revolutionized their floor planning process.
+            <p class="animate-up text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                Join thousands of event professionals who have revolutionized their floor planning process with KraftIQ.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="index.html#contact" class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-colors">
+            <div class="animate-up flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact" class="bg-white text-primary px-10 py-4 rounded-full font-bold hover:bg-opacity-90 transition-all text-center">
                     Get Started Today
                 </a>
-                <a href="expofloor-case-studies.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
+                <a href="expofloor-case-studies.html" class="border border-white/20 text-white px-10 py-4 rounded-full font-bold hover:bg-white/5 transition-all text-center">
                     View Success Stories
                 </a>
             </div>
@@ -327,32 +376,95 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-neutral-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="text-2xl font-bold font-archivo-black mb-4">
-                    <span class="text-white">Kraft</span><span class="text-blue-500">I</span><span class="text-blue-500">Q</span>
+    <footer class="bg-[#050507] pt-24 pb-12 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-4 gap-16 mb-20">
+                <div class="md:col-span-2">
+                    <img src="assets/KraftIQLogo.png" alt="KraftIQ" class="h-16 mb-8 brightness-0 invert opacity-80">
+                    <p class="text-neutral-500 text-sm max-w-sm mb-8 leading-relaxed">
+                        KraftIQ is a premier digital engineering studio dedicated to architecting high-performance ecosystems. We transform complex challenges into scalable technological realities.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all border border-white/5">
+                            <i class="fab fa-linkedin-in text-sm"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all border border-white/5">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all border border-white/5">
+                            <i class="fab fa-github text-sm"></i>
+                        </a>
+                    </div>
                 </div>
-                <p class="text-neutral-400 mb-6">Empowering innovation through cutting-edge technology solutions.</p>
-                <div class="text-neutral-400 text-sm">
-                    © 2024 KraftIQ. All rights reserved.
+                
+                <div>
+                    <h5 class="text-[10px] font-bold uppercase tracking-widest mb-8 text-white/20">Navigation</h5>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-sm text-neutral-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-sm text-neutral-400 hover:text-white transition-colors">Engineering Studio</a></li>
+                        <li><a href="services.html" class="text-sm text-neutral-400 hover:text-white transition-colors">Capabilities</a></li>
+                        <li><a href="products.html" class="text-sm text-neutral-400 hover:text-white transition-colors">Product Ecosystem</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="text-[10px] font-bold uppercase tracking-widest mb-8 text-white/20">Contact</h5>
+                    <ul class="space-y-4">
+                        <li class="text-sm text-neutral-400">basavarajkasbi@gmail.com</li>
+                        <li class="text-sm text-neutral-400">+91-7019293597</li>
+                        <li class="text-sm text-neutral-400">Bangalore, India</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-[10px] font-bold uppercase tracking-widest text-white/10">
+                    © 2026 KraftIQ Technologies. All rights reserved.
+                </div>
+                <div class="flex space-x-8">
+                    <a href="#" class="text-[9px] font-bold uppercase tracking-widest text-white/10 hover:text-white/40 transition-colors">Privacy Protocol</a>
+                    <a href="#" class="text-[9px] font-bold uppercase tracking-widest text-white/10 hover:text-white/40 transition-colors">Terms of Service</a>
                 </div>
             </div>
         </div>
+        
+        <!-- Decorative background text -->
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-bold text-white/[0.02] whitespace-nowrap pointer-events-none select-none leading-none -mb-[5vw]">
+            KRAFTIQ
+        </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.querySelectorAll('.animate-up').forEach((el) => {
+            gsap.fromTo(el, 
+                { opacity: 0, y: 30 },
+                { 
+                    opacity: 1, 
+                    y: 0, 
+                    duration: 1,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                        toggleActions: "play none none none"
+                    }
+                }
+            );
+        });
+
+        // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
             const icon = mobileMenuBtn.querySelector('i');
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.className = 'fas fa-bars text-xl';
-            } else {
-                icon.className = 'fas fa-times text-xl';
-            }
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
         });
     </script>
 </body>

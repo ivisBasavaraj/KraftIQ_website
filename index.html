@@ -11,133 +11,14 @@
     <meta name="keywords" content="software development, mobile app development, AI solutions, machine learning, robotics, data analytics, web development, technology consulting, digital transformation, Bangalore, India, KraftIQ">
     <meta name="author" content="KraftIQ">
     <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="7 days">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kraftiq.in/">
-    <meta property="og:title" content="KraftIQ - Empowering Innovation Through Technology">
-    <meta property="og:description" content="Transform your ideas into reality with cutting-edge technology solutions. Expert software development, AI/ML, and digital transformation services.">
-    <meta property="og:image" content="https://kraftiq.in/images/kraftiq-og-image.jpg">
-    <meta property="og:site_name" content="KraftIQ">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://kraftiq.in/">
-    <meta property="twitter:title" content="KraftIQ - Empowering Innovation Through Technology">
-    <meta property="twitter:description" content="Transform your ideas into reality with cutting-edge technology solutions. Expert software development, AI/ML, and digital transformation services.">
-    <meta property="twitter:image" content="https://kraftiq.in/images/kraftiq-twitter-image.jpg">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://kraftiq.in/">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="apple-touch-icon" href="assets/favicon.png">
-    
-    <!-- Structured Data - Organization -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "KraftIQ",
-      "alternateName": "KraftIQ Technologies",
-      "url": "https://kraftiq.in",
-      "logo": "https://kraftiq.in/images/kraftiq-logo.png",
-      "description": "Empowering innovation through cutting-edge technology solutions. Expert software development, AI/ML, robotics, and digital transformation services.",
-      "foundingDate": "2020",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Raichur / Mysuru",
-        "addressRegion": "Karnataka",
-        "addressCountry": "IN"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-7019293597",
-        "contactType": "customer service",
-        "email": "basavarajkasbi@gmail.com",
-        "availableLanguage": "English"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/kraftiq",
-        "https://twitter.com/kraftiq",
-        "https://github.com/kraftiq"
-      ],
-      "serviceArea": {
-        "@type": "Place",
-        "name": "Worldwide"
-      }
-    }
-    </script>
-    
-    <!-- Structured Data - Services -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Software Development",
-      "provider": {
-        "@type": "Organization",
-        "name": "KraftIQ"
-      },
-      "areaServed": "Worldwide",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Technology Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Software Development",
-              "description": "Custom software solutions tailored to business needs"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Mobile Application Development",
-              "description": "Native and cross-platform mobile apps"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "AI & Machine Learning",
-              "description": "Intelligent solutions powered by artificial intelligence"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Robotics",
-              "description": "Design and development of robotic systems"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Data Analytics",
-              "description": "Transform raw data into actionable insights"
-            }
-          }
-        ]
-      }
-    }
-    </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -145,7 +26,7 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- GSAP for animations -->
+    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     
@@ -155,76 +36,27 @@
                 extend: {
                     colors: {
                         primary: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            200: '#bfdbfe',
-                            300: '#93c5fd',
-                            400: '#60a5fa',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#1e3a8a',
-                        },
-                        secondary: {
-                            50: '#fafafa',
-                            100: '#f4f4f5',
-                            200: '#e4e4e7',
-                            300: '#d4d4d8',
-                            400: '#a1a1aa',
-                            500: '#71717a',
-                            600: '#52525b',
-                            700: '#3f3f46',
-                            800: '#27272a',
-                            900: '#18181b',
+                            DEFAULT: '#121217',
+                            light: '#1C1C22',
                         },
                         accent: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            200: '#bfdbfe',
-                            300: '#93c5fd',
-                            400: '#60a5fa',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#1e3a8a',
-                        },
-                        neutral: {
-                            50: '#ffffff',
-                            100: '#f8fafc',
-                            200: '#f1f5f9',
-                            300: '#e2e8f0',
-                            400: '#cbd5e1',
-                            500: '#94a3b8',
-                            600: '#64748b',
-                            700: '#475569',
-                            800: '#334155',
-                            900: '#1e293b',
-                        },
-                        dark: {
-                            50: '#fafafa',
-                            100: '#f4f4f5',
-                            200: '#e4e4e7',
-                            300: '#d4d4d8',
-                            400: '#a1a1aa',
-                            500: '#71717a',
-                            600: '#52525b',
-                            700: '#3f3f46',
-                            800: '#27272a',
-                            900: '#000000',
+                            DEFAULT: '#2B2B31',
+                            grey: '#F6F7F9',
+                            muted: '#6B7280',
                         }
                     },
                     fontFamily: {
                         'sans': ['Inter', 'system-ui', 'sans-serif'],
                         'serif': ['Playfair Display', 'serif'],
                     },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'glow': 'glow 2s ease-in-out infinite alternate',
-                        'slide-up': 'slideUp 0.8s ease-out',
-                        'fade-in': 'fadeIn 1s ease-out',
-                        'scale-in': 'scaleIn 0.6s ease-out',
+                    borderRadius: {
+                        'xl': '18px',
+                        '2xl': '22px',
+                        '3xl': '32px',
+                    },
+                    boxShadow: {
+                        'premium': '0 15px 40px rgba(0,0,0,0.08)',
+                        'card-float': '0 30px 60px rgba(0,0,0,0.12)',
                     }
                 }
             }
@@ -232,1240 +64,825 @@
     </script>
     
     <style>
-        /* Custom Animations */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(1deg); }
+        :root {
+            --rich-black: #121217;
+            --soft-grey: #F6F7F9;
+            --border-light: rgba(0, 0, 0, 0.08);
+            --border-dark: rgba(255, 255, 255, 0.1);
         }
-        
-        @keyframes glow {
-            from { box-shadow: 0 0 20px rgba(14, 165, 233, 0.3); }
-            to { box-shadow: 0 0 40px rgba(56, 189, 248, 0.6); }
-        }
-        
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        @keyframes scaleIn {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-        
-        /* Glass morphism effect */
-        .glass {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .glass-dark {
-            background: rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .glass-card {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(25px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
-        
-        .gradient-border {
-            position: relative;
-            background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(56, 189, 248, 0.1));
-            border: 1px solid transparent;
-        }
-        
-        .gradient-border::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            padding: 1px;
-            background: linear-gradient(135deg, #0ea5e9, #38bdf8);
-            border-radius: inherit;
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask-composite: exclude;
-        }
-        
-        /* Gradient text */
-        .gradient-text {
-            background: linear-gradient(135deg, #3b82f6, #60a5fa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .gradient-text-secondary {
-            background: linear-gradient(135deg, #3b82f6, #93c5fd);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
-        }
-        
-        /* Special glow effect for Innovation text */
-        .innovation-glow {
-            text-shadow: 0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(37, 99, 235, 0.4);
-        }
-        
-        /* Logo hover effects */
-        .logo-icon:hover {
-            transform: scale(1.1) rotate(10deg);
-            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.4);
-        }
-        
-        .logo-text:hover {
-            transform: scale(1.05);
-            filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.3));
-        }
-        .font-archivo-black { font-family: 'Archivo Black', sans-serif; }
-        
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: #fafafa;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(135deg, #3b82f6, #2563eb);
-            border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-        }
-        
-        /* Smooth scroll */
-        html {
+
+        body {
+            background-color: white;
+            color: var(--rich-black);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
             scroll-behavior: smooth;
         }
+
+        .premium-shadow { box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+        .premium-shadow-large { box-shadow: 0 30px 60px rgba(0,0,0,0.12); }
         
-        /* Hero background */
-        .hero-gradient {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 25%, #2563eb 50%, #3b82f6 75%, #60a5fa 100%);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
+        /* Navigation */
+        .nav-sticky {
+            background: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(0px);
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .nav-sticky-scrolled {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-light);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        /* Hero Layout - More Compact */
+        .hero-section {
+            padding-top: 110px;
+            padding-bottom: 70px;
+            background: radial-gradient(circle at top right, rgba(18, 18, 23, 0.02), transparent);
+        }
+
+        .debit-card {
+            background: linear-gradient(135deg, #2B2B31 0%, #121217 100%);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 24px;
+            color: white;
             position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        
-        /* Hero overlay for better navbar integration */
-        .hero-gradient::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 120px;
-            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, transparent 100%);
-            z-index: 1;
-            pointer-events: none;
+
+        .payment-card {
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: 14px;
+            padding: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
         }
-        
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        /* Professional card hover effects */
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-        }
-        
-        /* Button effects */
-        .btn-primary {
+
+        /* Experience Section Overlap - Tighter */
+        .experience-overlap {
+            margin-top: -60px;
             position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
+            z-index: 10;
         }
-        
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.6s;
+
+        /* Compact Section Spacing */
+        .section-padding { padding: 80px 0; }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
         }
+
+        .animate-up { opacity: 0; animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
         
-        .btn-primary:hover::before {
-            left: 100%;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
-        }
-        
-        /* Navigation effects */
-        /* Initial navbar - integrated with hero */
-        .navbar-integrated {
-            background: transparent !important;
-            backdrop-filter: none !important;
-            border: none !important;
-            box-shadow: none !important;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        }
-        
-        .navbar-integrated .logo-icon {
-            background: rgba(255, 255, 255, 0.2) !important;
-            border: 1px solid rgba(255, 255, 255, 0.3) !important;
-            backdrop-filter: blur(10px) !important;
-        }
-        
-        .navbar-integrated .logo-text {
-            color: white !important;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
-        }
-        .navbar-integrated .brand-k { color: white !important; }
-        .navbar-integrated .brand-i, .navbar-integrated .brand-q { color: #fb923c !important; }
-        
-        .navbar-integrated .nav-link {
-            color: rgba(255, 255, 255, 0.9) !important;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
-        }
-        
-        .navbar-integrated .nav-link:hover {
-            color: white !important;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
-        }
-        
-        .navbar-integrated .cta-button {
-            background: rgba(255, 255, 255, 0.2) !important;
-            color: white !important;
-            border: 1px solid rgba(255, 255, 255, 0.3) !important;
-            backdrop-filter: blur(10px) !important;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
-        }
-        
-        .navbar-integrated .cta-button:hover {
-            background: rgba(255, 255, 255, 0.3) !important;
-            border: 1px solid rgba(255, 255, 255, 0.4) !important;
-            transform: translateY(-2px) !important;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
-        }
-        
-        .navbar-integrated .mobile-menu-btn {
-            color: rgba(255, 255, 255, 0.9) !important;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
-        }
-        
-        .navbar-integrated .mobile-menu {
-            background: rgba(0, 0, 0, 0.95) !important;
-            backdrop-filter: blur(20px) !important;
-            border: 1px solid rgba(59, 130, 246, 0.3) !important;
-        }
-        
-        .navbar-integrated .mobile-menu .nav-link {
-            color: rgba(255, 255, 255, 0.9) !important;
-        }
-        
-        .navbar-integrated .mobile-menu .nav-link:hover {
-            color: white !important;
-            background: rgba(255, 255, 255, 0.1) !important;
-        }
-        
-        /* Separated navbar - after scroll */
-        .navbar-separated {
-            background: rgba(255, 255, 255, 0.95) !important;
-            backdrop-filter: blur(30px) !important;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
-            transform: translateY(0) !important;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        }
-        
-        .navbar-separated .logo-icon {
-            background: linear-gradient(135deg, #fb923c, #fdba74) !important;
-            border: none !important;
-            backdrop-filter: none !important;
-        }
-        
-        .navbar-separated .logo-text { text-shadow: none !important; background: none !important; -webkit-text-fill-color: inherit !important; }
-        .navbar-separated .brand-k { color: #000000 !important; }
-        .navbar-separated .brand-i, .navbar-separated .brand-q { color: #fb923c !important; }
-        
-        .navbar-separated .nav-link {
-            color: #525252 !important;
-            text-shadow: none !important;
-        }
-        
-        .navbar-separated .nav-link:hover {
-            color: #3b82f6 !important;
-            text-shadow: none !important;
-        }
-        
-        .navbar-separated .cta-button {
-            background: linear-gradient(135deg, #3b82f6, #60a5fa) !important;
-            color: white !important;
-            border: none !important;
-            backdrop-filter: none !important;
-            text-shadow: none !important;
-        }
-        
-        .navbar-separated .cta-button:hover {
-            background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
-            color: white !important;
-            border: none !important;
-            transform: translateY(-2px) !important;
-            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4) !important;
-        }
-        
-        .navbar-separated .mobile-menu-btn {
-            color: #525252 !important;
-            text-shadow: none !important;
-        }
-        
-        .navbar-separated .mobile-menu {
-            background: rgba(255, 255, 255, 0.95) !important;
-            backdrop-filter: blur(20px) !important;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
-            border: 1px solid rgba(0, 0, 0, 0.1) !important;
-        }
-        
-        .navbar-separated .mobile-menu .nav-link {
-            color: #525252 !important;
-        }
-        
-        .navbar-separated .mobile-menu .nav-link:hover {
-            color: #3b82f6 !important;
-            background: rgba(59, 130, 246, 0.05) !important;
-        }
-        
-        /* Parallax effect */
-        .parallax {
-            transform: translateZ(0);
-            will-change: transform;
-        }
-        
-        /* Professional spacing */
-        .section-padding {
-            padding: 5rem 0;
-        }
-        
-        /* Mobile Responsive Styles */
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #121217; border-radius: 10px; }
+
         @media (max-width: 1024px) {
-            .section-padding {
-                padding: 4rem 0;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .section-padding {
-                padding: 3rem 0;
-            }
-            
-            /* Mobile Navigation */
-            .navbar-mobile {
-                padding: 0 1rem;
-            }
-            
-            .mobile-menu {
-                max-height: calc(100vh - 80px);
-                overflow-y: auto;
-            }
-            
-            /* Mobile Hero */
-            .hero-mobile {
-                padding: 2rem 1rem;
-                min-height: 100vh;
-            }
-            
-            /* Mobile Typography */
-            .hero-title-mobile {
-                font-size: 2.5rem !important;
-                line-height: 1.1 !important;
-                margin-bottom: 1rem !important;
-            }
-            
-            .hero-subtitle-mobile {
-                font-size: 1.1rem !important;
-                line-height: 1.5 !important;
-                margin-bottom: 2rem !important;
-            }
-            
-            /* Mobile Buttons */
-            .mobile-btn-stack {
-                flex-direction: column;
-                gap: 1rem;
-                width: 100%;
-            }
-            
-            .mobile-btn {
-                width: 100%;
-                padding: 1rem 2rem;
-                font-size: 1rem;
-                justify-content: center;
-            }
-            
-            /* Mobile Stats Grid */
-            .mobile-stats {
-                grid-template-columns: repeat(2, 1fr) !important;
-                gap: 1rem !important;
-                margin-top: 2rem !important;
-            }
-            
-            .mobile-stat-card {
-                padding: 1rem !important;
-            }
-            
-            .mobile-stat-number {
-                font-size: 1.5rem !important;
-            }
-            
-            .mobile-stat-text {
-                font-size: 0.75rem !important;
-            }
-        }
-        
-        @media (max-width: 640px) {
-            .section-padding {
-                padding: 2rem 0;
-            }
-            
-            /* Extra small mobile adjustments */
-            .hero-title-mobile {
-                font-size: 2rem !important;
-            }
-            
-            .hero-subtitle-mobile {
-                font-size: 1rem !important;
-            }
-            
-            .mobile-stats {
-                grid-template-columns: 1fr !important;
-                gap: 0.75rem !important;
-            }
-            
-            /* Mobile floating elements */
-            .mobile-float-hide {
-                display: none !important;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            /* Ultra small screens */
-            .hero-title-mobile {
-                font-size: 1.75rem !important;
-            }
-            
-            .mobile-btn {
-                padding: 0.875rem 1.5rem;
-                font-size: 0.9rem;
-            }
-            
-            .navbar-mobile {
-                padding: 0 0.75rem;
-            }
-        }
-        
-        /* Typography enhancements */
-        .text-shadow {
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Loading animation */
-        .loading-dots {
-            display: inline-block;
-        }
-        
-        .loading-dots::after {
-            content: '';
-            animation: dots 2s infinite;
-        }
-        
-        @keyframes dots {
-            0%, 20% { content: ''; }
-            40% { content: '.'; }
-            60% { content: '..'; }
-            80%, 100% { content: '...'; }
+            .hero-section { padding-top: 100px; text-align: center; }
+            .experience-overlap { margin-top: 30px; }
+            .section-padding { padding: 60px 0; }
         }
     </style>
 </head>
 
-<body class="font-sans text-neutral-900 overflow-x-hidden">
+<body class="font-sans">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 navbar-integrated" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 navbar-mobile border-0">
-            <div class="flex justify-between items-center h-16 sm:h-20 border-0">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="index.html">
-                        <img src="assets/KraftIQLogo.png" alt="KraftIQ Logo" class="h-28 sm:h-36 md:h-40 w-auto transition-all duration-500">
-                    </a>
-                </div>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="nav-link text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">Home</a>
-                    <a href="about.html" class="nav-link text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">About Us</a>
-                    <a href="services.html" class="nav-link text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">Services</a>
-                    <a href="products.html" class="nav-link text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">Products</a>
-                    <a href="#contact" class="nav-link text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">Contact</a>
-                </div>
-                
-                <!-- CTA Button -->
-                <div class="hidden md:block">
-                    <a href="#contact" class="cta-button btn-primary bg-primary-600 text-white px-4 py-2 lg:px-6 lg:py-3 rounded-lg lg:rounded-xl font-semibold text-sm lg:text-base hover:bg-primary-700 transition-all duration-500 inline-block">
-                        Get Started
-                    </a>
-                </div>
-                
-                <!-- Mobile Menu Button -->
-                <button class="mobile-menu-btn md:hidden text-neutral-700 hover:text-primary-600 transition-colors duration-500" id="mobile-menu-btn">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
+    <nav class="fixed top-0 w-full z-50 nav-sticky" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="assets/KraftIQLogo.png" alt="KraftIQ Logo" class="h-20 w-auto">
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Home</a>
+                <a href="about.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">About</a>
+                <a href="services.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Services</a>
+                <a href="products.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Products</a>
+                <a href="#contact" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Contact</a>
             </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div class="mobile-menu md:hidden bg-white/95 backdrop-blur-lg hidden transition-all duration-300 ease-out shadow-lg" id="mobile-menu">
-            <div class="px-4 py-6 space-y-4 max-h-[calc(100vh-4rem)] overflow-y-auto">
-                <a href="#home" class="nav-link block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3 px-2 rounded-lg hover:bg-primary-50 -mx-2">Home</a>
-                <a href="about.html" class="nav-link block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3 px-2 rounded-lg hover:bg-primary-50 -mx-2">About Us</a>
-                <a href="services.html" class="nav-link block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3 px-2 rounded-lg hover:bg-primary-50 -mx-2">Services</a>
-                <a href="products.html" class="nav-link block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3 px-2 rounded-lg hover:bg-primary-50 -mx-2">Products</a>
-                <a href="#contact" class="nav-link block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3 px-2 rounded-lg hover:bg-primary-50 -mx-2">Contact</a>
-                <a href="#contact" class="cta-button w-full btn-primary bg-primary-600 text-white px-6 py-4 rounded-xl font-semibold mt-6 hover:bg-primary-700 transition-all duration-500 text-center inline-block">
-                    Get Started
-                </a>
-            </div>
+            
+            <a href="#contact" class="bg-primary text-white px-6 py-2 rounded-full text-[13px] font-bold hover:scale-105 transition-transform">
+                Get Started
+            </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen relative overflow-hidden" itemscope itemtype="https://schema.org/WebPageElement" style="background-image: url('assets/photo_2025-11-26_10-51-27.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-
-
-        
-        <!-- Hero Content -->
-        <div class="flex items-center justify-center min-h-screen hero-mobile relative z-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <div class="animate-fade-in">
-
-                    
-                    <!-- Main Heading -->
-                    <h1 class="hero-title-mobile text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-white mb-4 sm:mb-6 mt-16 sm:mt-20 text-shadow" itemprop="headline">
-                        Empowering New
-                        <span class="block text-white">Innovation.</span>
+    <section id="home" class="hero-section">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-up">
+                    <div class="inline-flex items-center space-x-2 bg-neutral-100 rounded-full px-3 py-1 mb-6">
+                        <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                        <span class="text-[9px] font-bold tracking-widest uppercase opacity-60">Pioneering Digital Excellence</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-serif font-bold leading-[1.1] mb-6 tracking-tight">
+                        Engineering the <br> Digital Frontier.
                     </h1>
-                    
-                    <!-- Subheading -->
-                    <p class="hero-subtitle-mobile text-base sm:text-xl md:text-2xl text-white/90 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
-                        Building intelligent solutions that accelerate business growth through engineering excellence and AI innovation.
+                    <p class="text-lg text-neutral-500 max-w-md mb-10 leading-relaxed">
+                        KraftIQ delivers high-performance digital ecosystems. We transform complex business challenges into seamless, scalable technological realities.
                     </p>
-                    
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mobile-btn-stack px-4 sm:px-0">
-                        <a href="services.html" class="mobile-btn btn-primary bg-primary-100 text-primary-700 px-6 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl font-semibold text-base sm:text-lg hover:bg-primary-200 transition-all duration-300 flex items-center justify-center">
-                            <i class="fas fa-play mr-2 text-sm sm:text-base"></i>
+                    <div class="flex flex-wrap gap-3 lg:justify-start justify-center">
+                        <a href="#contact" class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-sm hover:translate-y-[-2px] transition-transform premium-shadow-large">
+                            Consult with Us
+                        </a>
+                        <a href="services.html" class="px-8 py-4 rounded-xl font-bold text-sm border border-neutral-200 hover:bg-neutral-50 transition-colors">
                             Explore Solutions
                         </a>
-                       
+                    </div>
+                </div>
+                
+                <div class="relative animate-up" style="animation-delay: 0.2s">
+                    <!-- Tech Platform Visualization Card -->
+                    <div class="debit-card w-full max-w-[400px] ml-auto overflow-hidden">
+                        <div class="flex justify-between items-start mb-12">
+                            <div class="text-xl font-bold tracking-tight">KraftIQ Cloud</div>
+                            <div class="w-10 h-7 bg-white/10 rounded flex items-center justify-center">
+                                <i class="fas fa-microchip text-[12px] opacity-60"></i>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-white/40 h-full w-[75%]"></div>
+                                </div>
+                                <span class="text-[10px] font-mono opacity-60">75%</span>
+                            </div>
+                            <div class="flex space-x-10">
+                                <div>
+                                    <div class="text-[9px] uppercase opacity-40 mb-0.5 font-bold">Node Status</div>
+                                    <div class="text-[13px] font-semibold flex items-center">
+                                        <span class="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
+                                        Active
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="text-[9px] uppercase opacity-40 mb-0.5 font-bold">Latency</div>
+                                    <div class="text-[13px] font-semibold">12ms</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Abstract circuit pattern overlay -->
+                        <div class="absolute top-0 right-0 w-32 h-32 opacity-10 pointer-events-none">
+                            <i class="fas fa-project-diagram text-8xl -mr-10 -mt-10"></i>
+                        </div>
                     </div>
                     
-
+                    <div class="payment-card absolute -bottom-8 -left-2 w-64 hidden lg:block animate-up" style="animation-delay: 0.5s">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-brain text-sm"></i>
+                            </div>
+                            <div>
+                                <div class="text-[9px] text-neutral-400 font-bold uppercase tracking-wider">Neural Engine</div>
+                                <div class="text-base font-bold">Optimized</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        
+    </section>
 
+    <!-- Experience Cards (Overlap) -->
+    <section class="experience-overlap">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-8 rounded-[28px] premium-shadow border border-neutral-50 hover:translate-y-[-6px] transition-transform duration-500">
+                    <div class="w-12 h-12 bg-neutral-50 rounded-xl flex items-center justify-center mb-6 text-primary">
+                        <i class="fas fa-layer-group text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 tracking-tight">Enterprise Scalability</h3>
+                    <p class="text-neutral-500 leading-relaxed text-xs">
+                        Architectures engineered for growth, leveraging cloud-native technologies for high availability and elastic performance.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-[28px] premium-shadow border border-neutral-50 hover:translate-y-[-6px] transition-transform duration-500">
+                    <div class="w-12 h-12 bg-neutral-50 rounded-xl flex items-center justify-center mb-6 text-primary">
+                        <i class="fas fa-shield-halved text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 tracking-tight">Security-First Focus</h3>
+                    <p class="text-neutral-500 leading-relaxed text-xs">
+                        Rigorous security protocols, including zero-trust architectures and advanced encryption, to protect your critical digital assets.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-[28px] premium-shadow border border-neutral-50 hover:translate-y-[-6px] transition-transform duration-500">
+                    <div class="w-12 h-12 bg-neutral-50 rounded-xl flex items-center justify-center mb-6 text-primary">
+                        <i class="fas fa-microchip text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 tracking-tight">Cognitive Engineering</h3>
+                    <p class="text-neutral-500 leading-relaxed text-xs">
+                        Specialized AI and Machine Learning models integrated seamlessly into your business logic to drive data-informed decision making.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark Steps Section -->
+    <section class="section-padding bg-primary text-white mt-24 rounded-[40px] mx-4">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-end mb-16">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">Execution is the <br> Ultimate Differentiator.</h2>
+                    <p class="text-neutral-400 text-sm max-w-sm">We adhere to a rigorous, systematic methodology to ensure every line of code translates into tangible business value.</p>
+                </div>
+                <div class="flex justify-end lg:pb-2">
+                    <a href="#contact" class="text-sm font-bold border-b-2 border-white/20 pb-1 hover:border-white transition-colors">Initiate Project Discovery</a>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-10">
+                <div class="group">
+                    <div class="text-6xl font-serif text-white/5 mb-4 group-hover:text-white/10 transition-colors">01</div>
+                    <h4 class="text-lg font-bold mb-3">Strategic Alignment</h4>
+                    <p class="text-neutral-500 text-xs leading-relaxed">In-depth analysis of your business landscape to identify high-impact technological opportunities.</p>
+                </div>
+                <div class="group">
+                    <div class="text-6xl font-serif text-white/5 mb-4 group-hover:text-white/10 transition-colors">02</div>
+                    <h4 class="text-lg font-bold mb-3">Architectural Design</h4>
+                    <p class="text-neutral-500 text-xs leading-relaxed">Systematizing complexity through premium, user-centric interfaces and scalable blueprints.</p>
+                </div>
+                <div class="group">
+                    <div class="text-6xl font-serif text-white/5 mb-4 group-hover:text-white/10 transition-colors">03</div>
+                    <h4 class="text-lg font-bold mb-3">Precision Engineering</h4>
+                    <p class="text-neutral-500 text-xs leading-relaxed">Iterative development cycles leveraging industry-leading stacks to build robust solutions.</p>
+                </div>
+                <div class="group">
+                    <div class="text-6xl font-serif text-white/5 mb-4 group-hover:text-white/10 transition-colors">04</div>
+                    <h4 class="text-lg font-bold mb-3">Adaptive Evolution</h4>
+                    <p class="text-neutral-500 text-xs leading-relaxed">Continuous monitoring, data-driven refinements, and proactive post-launch optimizations.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section-padding bg-neutral-50 relative pt-24" itemscope itemtype="https://schema.org/AboutPage">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <!-- Content -->
-                <div class="animate-slide-up">
-                    <div class="inline-flex items-center bg-primary-50 rounded-full px-4 py-2 mb-6">
-                        <i class="fas fa-lightbulb text-primary-500 mr-2"></i>
-                        <span class="text-primary-700 font-medium text-sm">About KraftIQ</span>
+    <section id="about" class="py-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative group max-w-md mx-auto lg:ml-0">
+                    <div class="aspect-[4/3] bg-neutral-100 rounded-[32px] overflow-hidden premium-shadow">
+                        <img src="https://i.pinimg.com/1200x/1c/fc/31/1cfc311d56a564f49dfadfa77c309492.jpg" alt="Digital Excellence" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
                     </div>
-                    
-                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-6" itemprop="headline">
-                        Pioneering the Future of
-                        <span class="gradient-text">Technology</span>
-                    </h2>
-                    
-                    <p class="text-lg text-neutral-600 mb-8 leading-relaxed">
-                        KraftIQ is a digital solutions studio founded by Full Stack Developer Basavaraja and AI/ML Specialist Manasi S. Byali. The company blends engineering and artificial intelligence to build modern, scalable, and user‑centric applications for businesses and educational institutions.
+                    <!-- Floating stats card - Smaller -->
+                    <div class="absolute -bottom-6 -right-4 bg-white/80 backdrop-blur-xl p-5 rounded-2xl premium-shadow border border-white/20 hidden md:block animate-up" style="animation-delay: 0.4s">
+                        <div class="flex items-center space-x-3">
+                            <div class="text-2xl font-serif font-bold text-primary">5+</div>
+                            <div class="h-6 w-px bg-neutral-200"></div>
+                            <div>
+                                <div class="text-[8px] uppercase font-bold tracking-widest text-primary/40">Years</div>
+                                <div class="text-[10px] font-bold text-primary">Mastery</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-up">
+                    <div class="inline-flex items-center space-x-2 bg-neutral-100 rounded-full px-3 py-1 mb-4">
+                        <span class="w-1 h-1 bg-primary rounded-full"></span>
+                        <span class="text-[8px] font-bold tracking-widest uppercase opacity-60">Philosophy</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6 leading-tight tracking-tight">Catalyzing Digital <br> Modernization.</h2>
+                    <p class="text-neutral-500 text-sm mb-8 leading-relaxed max-w-lg">
+                        KraftIQ is a premier digital engineering studio that harmonizes cutting-edge architecture with cognitive intelligence to architect the next generation of enterprise solutions.
                     </p>
                     
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center">
-                                <i class="fas fa-check text-white text-xs"></i>
-                            </div>
-                            <span class="text-neutral-700">Cutting-edge technology solutions</span>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center space-x-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+                            <i class="fas fa-microchip text-primary text-xs"></i>
+                            <span class="text-xs font-bold text-primary/80">Cognitive Logic</span>
                         </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center">
-                                <i class="fas fa-check text-white text-xs"></i>
-                            </div>
-                            <span class="text-neutral-700">Expert team of innovators</span>
+                        <div class="flex items-center space-x-3 p-3 rounded-xl bg-neutral-50 border border-neutral-100">
+                            <i class="fas fa-layer-group text-primary text-xs"></i>
+                            <span class="text-xs font-bold text-primary/80">Elastic Scaling</span>
                         </div>
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center">
-                                    <i class="fas fa-check text-white text-xs"></i>
-                                </div>
-                                <span class="text-neutral-700">Proven track record of success</span>
-                            </div>
-                            <a href="about.html" class="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-2 rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 ml-4">
-                                Learn More
+                    </div>
+
+                    <a href="about.html" class="inline-flex items-center space-x-2 bg-primary text-white px-8 py-3 rounded-xl font-bold text-xs hover:translate-y-[-1px] transition-all premium-shadow">
+                        <span>Explore Mission</span>
+                        <i class="fas fa-arrow-right text-[8px]"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Capabilities Section -->
+    <section id="services" class="section-padding relative overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-neutral-50 rounded-full blur-3xl opacity-50 -mr-64 -mt-64 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-neutral-50 rounded-full blur-3xl opacity-50 -ml-48 -mb-48 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative">
+            <div class="grid lg:grid-cols-2 gap-12 items-end mb-16">
+                <div>
+                    <div class="inline-flex items-center space-x-2 bg-neutral-100 rounded-full px-3 py-1 mb-6">
+                        <span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
+                        <span class="text-[9px] font-bold tracking-widest uppercase opacity-60">Full-Stack Excellence</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold tracking-tight">Core Capabilities.</h2>
+                </div>
+                <div class="lg:text-right">
+                    <p class="text-neutral-500 text-sm max-w-sm ml-auto leading-relaxed">
+                        We deploy multi-disciplinary engineering teams to solve complex architectural challenges through precision-built digital ecosystems.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-6">
+                <!-- Large Feature Card: Web Systems -->
+                <div class="md:col-span-6 lg:col-span-8 bg-white p-10 rounded-[32px] border border-neutral-100 premium-shadow group hover:border-primary/20 transition-all duration-700 relative overflow-hidden">
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="w-14 h-14 bg-neutral-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                            <i class="fas fa-code text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Enterprise Web Systems</h3>
+                        <p class="text-neutral-500 text-sm leading-relaxed mb-10 max-w-md">
+                            Architecting resilient, high-traffic web platforms. We leverage modern frameworks to deliver seamless performance, uncompromising security, and exceptional user experiences at scale.
+                        </p>
+                        <div class="mt-auto">
+                            <a href="services.html" class="inline-flex items-center space-x-2 text-[10px] font-bold uppercase tracking-widest text-primary group/link">
+                                <span>Technical Specifications</span>
+                                <i class="fas fa-arrow-right text-[8px] group-hover/link:translate-x-1 transition-transform"></i>
                             </a>
                         </div>
                     </div>
+                    <!-- Decorative element -->
+                    <div class="absolute bottom-0 right-0 w-64 h-64 bg-neutral-50 rounded-tl-full opacity-40 pointer-events-none translate-x-10 translate-y-10 group-hover:scale-110 transition-transform duration-700"></div>
                 </div>
-                
-                <!-- Image/Visual -->
-                <div class="bg-white rounded-2xl p-6 shadow-lg">
-                    <img src="assets/1723536372073.jpg" alt="Technology Innovation" class="w-full h-64 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-bold mb-2">Technology Innovation</h3>
-                    <p class="text-gray-600">Pioneering the future with cutting-edge solutions</p>
+
+                <!-- Secondary Card: AI & Data -->
+                <div class="md:col-span-6 lg:col-span-4 bg-primary text-white p-10 rounded-[32px] premium-shadow-large group relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8">
+                            <i class="fas fa-brain text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Cognitive AI</h3>
+                        <p class="text-neutral-400 text-sm leading-relaxed mb-10">
+                            Transforming raw data into predictive intelligence through custom machine learning models and neural networks.
+                        </p>
+                        <a href="services.html" class="inline-flex items-center space-x-2 text-[10px] font-bold uppercase tracking-widest text-white/60 hover:text-white transition-colors">
+                            <span>Deep Dive</span>
+                            <i class="fas fa-chevron-right text-[8px]"></i>
+                        </a>
+                    </div>
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl"></div>
+                </div>
+
+                <!-- Standard Card: Mobile Ecosystems -->
+                <div class="md:col-span-3 lg:col-span-4 bg-white p-8 rounded-[32px] border border-neutral-100 premium-shadow group hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-12 h-12 bg-neutral-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i class="fas fa-mobile-alt text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Mobile Ecosystems</h3>
+                    <p class="text-neutral-500 text-xs leading-relaxed mb-8">High-fidelity cross-platform applications delivering native performance via Flutter.</p>
+                    <a href="services.html" class="text-[9px] font-bold uppercase tracking-widest text-primary/40 group-hover:text-primary transition-colors">Explore Solutions</a>
+                </div>
+
+                <!-- Standard Card: Cloud -->
+                <div class="md:col-span-3 lg:col-span-4 bg-white p-8 rounded-[32px] border border-neutral-100 premium-shadow group hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-12 h-12 bg-neutral-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i class="fas fa-cloud text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cloud Infrastructure</h3>
+                    <p class="text-neutral-500 text-xs leading-relaxed mb-8">Scalable, resilient cloud architectures and optimized RESTful/GraphQL API ecosystems.</p>
+                    <a href="services.html" class="text-[9px] font-bold uppercase tracking-widest text-primary/40 group-hover:text-primary transition-colors">Explore Infrastructure</a>
+                </div>
+
+                <!-- Long Card: IoT & EdTech combined/split -->
+                <div class="md:col-span-6 lg:col-span-4 grid grid-rows-2 gap-6">
+                    <div class="bg-neutral-50 p-6 rounded-3xl flex items-center space-x-5 hover:bg-neutral-100 transition-colors cursor-default border border-transparent hover:border-neutral-200">
+                        <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center premium-shadow">
+                            <i class="fas fa-cogs text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold">Industrial IoT</h4>
+                            <p class="text-[10px] text-neutral-400">Smart automation frameworks.</p>
+                        </div>
+                    </div>
+                    <div class="bg-neutral-50 p-6 rounded-3xl flex items-center space-x-5 hover:bg-neutral-100 transition-colors cursor-default border border-transparent hover:border-neutral-200">
+                        <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center premium-shadow">
+                            <i class="fas fa-graduation-cap text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold">EdTech Innovation</h4>
+                            <p class="text-[10px] text-neutral-400">Next-gen learning systems.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section-padding bg-white relative" itemscope itemtype="https://schema.org/Service">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header -->
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center bg-primary-50 rounded-full px-4 py-2 mb-6">
-                    <i class="fas fa-cogs text-primary-500 mr-2"></i>
-                    <span class="text-primary-700 font-medium text-sm">Our Services</span>
-                </div>
-                
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-6">
-                    Comprehensive
-                    <span class="gradient-text">Solutions</span>
-                </h2>
-                
-                <p class="text-lg text-neutral-600 max-w-3xl mx-auto">
-                    From concept to deployment, we offer end-to-end technology services that drive innovation and accelerate growth.
-                </p>
-            </div>
-            
-            <!-- Services Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-neutral-100" itemscope itemtype="https://schema.org/Service">
-                    <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-code text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-neutral-900 mb-4" itemprop="name">Full Stack Web Development</h3>
-                    <p class="text-neutral-600 mb-6" itemprop="description">Modern web applications using MERN stack, Vue.js, and Next.js for scalable, high-performance solutions.</p>
-                    <a href="#" class="text-primary-600 font-semibold hover:text-primary-700 transition-colors">
-                        Learn More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-neutral-100" itemscope itemtype="https://schema.org/Service">
-                    <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-neutral-900 mb-4" itemprop="name">Mobile App Development</h3>
-                    <p class="text-neutral-600 mb-6" itemprop="description">Cross-platform mobile applications built with Flutter for iOS and Android with native performance.</p>
-                    <a href="#" class="text-primary-600 font-semibold hover:text-primary-700 transition-colors">
-                        Learn More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-neutral-100" itemscope itemtype="https://schema.org/Service">
-                    <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-brain text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-neutral-900 mb-4" itemprop="name">AI/ML Development & Data Analytics</h3>
-                    <p class="text-neutral-600 mb-6" itemprop="description">Machine learning models, predictive analytics, and intelligent automation to transform your data into insights.</p>
-                    <a href="#" class="text-primary-600 font-semibold hover:text-primary-700 transition-colors">
-                        Learn More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-neutral-100" itemscope itemtype="https://schema.org/Service">
-                    <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-cloud text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-neutral-900 mb-4" itemprop="name">Cloud Deployment / APIs</h3>
-                    <p class="text-neutral-600 mb-6" itemprop="description">Scalable cloud infrastructure, RESTful APIs, and deployment solutions for reliable, secure applications.</p>
-                    <a href="#" class="text-primary-600 font-semibold hover:text-primary-700 transition-colors">
-                        Learn More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 5 -->
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-neutral-100" itemscope itemtype="https://schema.org/Service">
-                    <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-cogs text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-neutral-900 mb-4" itemprop="name">Automation & IoT Dashboards</h3>
-                    <p class="text-neutral-600 mb-6" itemprop="description">Smart automation systems and real-time IoT dashboards for monitoring and controlling connected devices.</p>
-                    <a href="#" class="text-primary-600 font-semibold hover:text-primary-700 transition-colors">
-                        Learn More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-                
-                <!-- Service 6 -->
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-neutral-100" itemscope itemtype="https://schema.org/Service">
-                    <div class="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-neutral-900 mb-4" itemprop="name">Educational Technology Solutions</h3>
-                    <p class="text-neutral-600 mb-6" itemprop="description">Learning management systems, educational platforms, and digital tools to enhance teaching and learning experiences.</p>
-                    <a href="#" class="text-primary-600 font-semibold hover:text-primary-700 transition-colors">
-                        Learn More <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
 
     <!-- Products Section -->
-    <section class="section-padding bg-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header -->
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center bg-primary-50 rounded-full px-4 py-2 mb-6">
-                    <i class="fas fa-cube text-primary-500 mr-2"></i>
-                    <span class="text-primary-700 font-medium text-sm">Our Products</span>
+    <section id="products" class="section-padding">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-end mb-16">
+                <div>
+                    <div class="inline-flex items-center space-x-2 bg-neutral-100 rounded-full px-3 py-1 mb-6">
+                        <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                        <span class="text-[9px] font-bold tracking-widest uppercase opacity-60">Engineered Solutions</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold tracking-tight">Our Products.</h2>
                 </div>
-                
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-6">
-                    Innovative
-                    <span class="gradient-text">Solutions</span>
-                </h2>
-                
-                <p class="text-lg text-neutral-600 max-w-3xl mx-auto">
-                    Innovative solutions to streamline operations and boost productivity.
-                </p>
+                <div class="lg:text-right">
+                    <p class="text-neutral-500 text-sm max-w-xs ml-auto leading-relaxed">
+                        Battle-tested enterprise platforms ready for immediate integration and scaling.
+                    </p>
+                </div>
             </div>
             
-            <!-- Products Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Product 1 -->
-                <a href="case-studies.html" class="card-hover bg-white rounded-2xl p-6 shadow-lg border border-neutral-100 block transition-all duration-300">
-                    <div class="w-12 h-12 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-4">
-                        <i class="fas fa-clipboard-check text-white text-lg"></i>
+                <a href="case-studies.html" class="group relative">
+                    <div class="aspect-[4/3] bg-neutral-50 rounded-[32px] overflow-hidden mb-6 relative">
+                        <img src="https://i.pinimg.com/736x/04/10/c9/0410c98c3f714c26b30b6879149756e6.jpg" alt="Document Tracker" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </div>
-                    <h3 class="text-lg font-bold text-neutral-900 mb-3">Document Tracker</h3>
-                    <p class="text-neutral-600 text-sm mb-4">Streamline vendor-consultant workflows with intelligent document tracking and management system.</p>
-                    <div class="flex items-center text-primary-600 text-sm font-medium">
-                        <i class="fas fa-arrow-right mr-1"></i>
-                        Learn More
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-xl font-bold tracking-tight">Document Tracker</h4>
+                            <i class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-neutral-500 text-xs leading-relaxed">Precision-built workflow management system for complex vendor-consultant ecosystems.</p>
                     </div>
                 </a>
-                
+
                 <!-- Product 2 -->
-                <a href="expofloor-case-studies.html" class="card-hover bg-white rounded-2xl p-6 shadow-lg border border-neutral-100 block transition-all duration-300">
-                    <div class="w-12 h-12 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-4">
-                        <i class="fas fa-drafting-compass text-white text-lg"></i>
+                <a href="visitor-cam-case-studies.html" class="group relative">
+                    <div class="aspect-[4/3] bg-neutral-50 rounded-[32px] overflow-hidden mb-6 relative">
+                        <img src="https://i.pinimg.com/1200x/8c/2b/9f/8c2b9f0f33b781aa76e24195905b77d5.jpg" alt="Visitor Cam" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </div>
-                    <h3 class="text-lg font-bold text-neutral-900 mb-3">Expofloor Plan</h3>
-                    <p class="text-neutral-600 text-sm mb-4">Create stunning 2D and 3D floor plans for exhibitions and events with our intuitive design tools.</p>
-                    <div class="flex items-center text-primary-600 text-sm font-medium">
-                        <i class="fas fa-arrow-right mr-1"></i>
-                        Explore Now
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-xl font-bold tracking-tight">Visitor Cam</h4>
+                            <i class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-neutral-500 text-xs leading-relaxed">Advanced AI-powered facial recognition engine for automated security and check-in logging.</p>
                     </div>
                 </a>
-                
+
                 <!-- Product 3 -->
-                <a href="max-mailer-case-studies.html" class="card-hover bg-white rounded-2xl p-6 shadow-lg border border-neutral-100 block transition-all duration-300">
-                    <div class="w-12 h-12 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-4">
-                        <i class="fas fa-paper-plane text-white text-lg"></i>
+                <a href="expofloor-case-studies.html" class="group relative">
+                    <div class="aspect-[4/3] bg-neutral-50 rounded-[32px] overflow-hidden mb-6 relative">
+                        <img src="assets/Floorplan.jpeg" alt="Expofloor Plan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </div>
-                    <h3 class="text-lg font-bold text-neutral-900 mb-3">Max mailer </h3>
-                    <p class="text-neutral-600 text-sm mb-4">Send 1000+ emails in one click with our powerful bulk email automation and tracking system.</p>
-                    <div class="flex items-center text-primary-600 text-sm font-medium">
-                        <i class="fas fa-arrow-right mr-1"></i>
-                        Get Started
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-xl font-bold tracking-tight">Expofloor Plan</h4>
+                            <i class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-neutral-500 text-xs leading-relaxed">Intuitive 2D/3D visualization engine for large-scale exhibition and floor space planning.</p>
                     </div>
                 </a>
-                
-                <!-- Product 4 - Coming Soon -->
-                <a href="mobile-usage-tracker-case-studies.html" class="card-hover bg-white rounded-2xl p-6 shadow-lg border border-neutral-100 block transition-all duration-300">
-                    <div class="w-12 h-12 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-4">
-                        <i class="fas fa-mobile-alt text-white text-lg"></i>
+
+                <!-- Product 4 -->
+                <a href="max-mailer-case-studies.html" class="group relative">
+                    <div class="aspect-[4/3] bg-neutral-50 rounded-[32px] overflow-hidden mb-6 relative">
+                        <img src="https://i.pinimg.com/1200x/43/c6/95/43c695403a6e9b11abaaccea8e93c664.jpg" alt="Max Mailer" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </div>
-                    <h3 class="text-lg font-bold text-neutral-900 mb-3">Mobile Usage Tracker</h3>
-                    <p class="text-neutral-600 text-sm mb-4">Monitor and analyze mobile device usage patterns with comprehensive tracking and reporting features.</p>
-                    <div class="flex items-center text-primary-600 text-sm font-medium">
-                        <i class="fas fa-arrow-right mr-1"></i>
-                        Learn More
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-xl font-bold tracking-tight">Max Mailer</h4>
+                            <i class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-neutral-500 text-xs leading-relaxed">Enterprise-grade automated email communication platform with high deliverability metrics.</p>
                     </div>
                 </a>
 
                 <!-- Product 5 -->
-                <a href="visitor-cam-case-studies.html" class="card-hover bg-white rounded-2xl p-6 shadow-lg border border-neutral-100 block transition-all duration-300">
-                    <div class="w-12 h-12 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-4">
-                        <i class="fas fa-user-check text-white text-lg"></i>
+                <a href="mobile-usage-tracker-case-studies.html" class="group relative">
+                    <div class="aspect-[4/3] bg-neutral-100 rounded-[32px] flex items-center justify-center mb-6 relative overflow-hidden">
+                        <i class="fas fa-chart-pie text-5xl text-neutral-200 group-hover:scale-110 transition-transform duration-700"></i>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent"></div>
                     </div>
-                    <h3 class="text-lg font-bold text-neutral-900 mb-3">Visitor Cam</h3>
-                    <p class="text-neutral-600 text-sm mb-4">AI-based visitor management combining face recognition, QR authentication, and secure check-in/out logging with images.</p>
-                    <div class="flex items-center text-primary-600 text-sm font-medium">
-                        <i class="fas fa-arrow-right mr-1"></i>
-                        Learn More
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-xl font-bold tracking-tight">Usage Tracker</h4>
+                            <i class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-neutral-500 text-xs leading-relaxed">Deep analytical framework for monitoring and optimizing mobile device engagement and usage patterns.</p>
                     </div>
                 </a>
 
                 <!-- Product 6 -->
-                <a href="smart-process-tracker-case-studies.html" class="card-hover bg-white rounded-2xl p-6 shadow-lg border border-neutral-100 block transition-all duration-300">
-                    <div class="w-12 h-12 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-4">
-                        <i class="fas fa-cogs text-white text-lg"></i>
+                <a href="smart-process-tracker-case-studies.html" class="group relative">
+                    <div class="aspect-[4/3] bg-neutral-100 rounded-[32px] flex items-center justify-center mb-6 relative overflow-hidden">
+                        <i class="fas fa-tasks text-5xl text-neutral-200 group-hover:scale-110 transition-transform duration-700"></i>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent"></div>
                     </div>
-                    <h3 class="text-lg font-bold text-neutral-900 mb-3">Smart Process Tracker</h3>
-                    <p class="text-neutral-600 text-sm mb-4">Automation-driven workflow tracking with dashboards to reduce manual effort, minimize errors, and improve productivity.</p>
-                    <div class="flex items-center text-primary-600 text-sm font-medium">
-                        <i class="fas fa-arrow-right mr-1"></i>
-                        Learn More
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-xl font-bold tracking-tight">Process Tracker</h4>
+                            <i class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-neutral-500 text-xs leading-relaxed">Comprehensive enterprise workflow tracker designed for end-to-end operational transparency.</p>
                     </div>
+                </a>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="products.html" class="inline-flex items-center space-x-2 bg-neutral-50 text-primary border border-neutral-200 px-8 py-4 rounded-2xl font-bold text-sm hover:bg-neutral-100 transition-all">
+                    <span>View All Product Specifications</span>
+                    <i class="fas fa-external-link-alt text-[10px] opacity-40"></i>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="section-padding bg-neutral-50 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header -->
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center bg-primary-50 rounded-full px-4 py-2 mb-6">
-                    <i class="fas fa-quote-left text-primary-500 mr-2"></i>
-                    <span class="text-primary-700 font-medium text-sm">Testimonials</span>
+    <section class="section-padding bg-primary text-white rounded-[40px] mx-4 relative overflow-hidden">
+        <!-- Abstract background pattern -->
+        <div class="absolute top-0 right-0 w-full h-full opacity-[0.03] pointer-events-none">
+            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 L100 0" stroke="white" stroke-width="0.1" fill="none" />
+                <path d="M0 0 L100 100" stroke="white" stroke-width="0.1" fill="none" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative">
+            <div class="grid lg:grid-cols-3 gap-16 items-start">
+                <div class="lg:col-span-1">
+                    <div class="inline-flex items-center space-x-2 bg-white/5 rounded-full px-3 py-1 mb-6">
+                        <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
+                        <span class="text-[9px] font-bold tracking-widest uppercase opacity-60 text-white">Validation</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6 leading-tight">Global Trust. <br> Proven Impact.</h2>
+                    <p class="text-neutral-400 text-sm max-w-xs leading-relaxed">We measure our success through the technological evolution of our partners.</p>
                 </div>
                 
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-6">
-                    What Our
-                    <span class="gradient-text">Clients Say</span>
-                </h2>
+                <div class="lg:col-span-2 grid md:grid-cols-2 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white/5 p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors group">
+                        <div class="text-4xl text-white/20 font-serif mb-4 group-hover:text-white/40 transition-colors">“</div>
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-8 italic">
+                            "KraftIQ transformed our digital presence with a news platform that exceeded our expectations in both speed and reliability."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="assets/Raichurbelaku.png" class="w-10 h-10 rounded-full bg-white/10 p-1 mr-4 object-contain">
+                            <div>
+                                <div class="text-[12px] font-bold">Mallikarjin</div>
+                                <div class="text-[9px] opacity-40 uppercase font-bold tracking-widest">Founder, Raichuru Belaku</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white/5 p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors group">
+                        <div class="text-4xl text-white/20 font-serif mb-4 group-hover:text-white/40 transition-colors">“</div>
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-8 italic">
+                            "Outstanding AI integration. Their ability to translate complex data into actionable intelligence helped us launch ahead of schedule."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="assets/STEM.png" class="w-10 h-10 rounded-full bg-white/10 p-1 mr-4 object-contain">
+                            <div>
+                                <div class="text-[12px] font-bold">Shivanna DM</div>
+                                <div class="text-[9px] opacity-40 uppercase font-bold tracking-widest">CEO, STEM RobAI</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <!-- Testimonials Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-neutral-100">
-                    <div class="flex items-center mb-4">
-                        <div class="flex text-yellow-500">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-neutral-600 mb-6 italic">"KraftIQ transformed our digital presence with a cutting-edge news platform. Their technical expertise and timely delivery exceeded our expectations."</p>
-                    <div class="flex items-center">
-                        <img src="assets/Raichurbelaku.png" 
-                             alt="Mallikarjin" 
-                             class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <div class="font-semibold text-neutral-900">Mallikarjin</div>
-                            <div class="text-sm text-neutral-600">Founder, Raichuru Belaku News</div>
-                        </div>
-                    </div>
+            <div class="mt-24 pt-12 border-t border-white/5">
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-12 items-center opacity-40 grayscale brightness-200 hover:grayscale-0 transition-all duration-700">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpV0qrXYI4gBF7wyMH7poAegD4eC3jpEKJmQ&s" class="h-6 object-contain mx-auto" alt="BIEC">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/IMTMA.png" class="h-5 object-contain mx-auto" alt="IMTMA">
+                    <img src="https://iqnaax.com/images/671b713bda345IQNAAX%20Logo.png" class="h-5 object-contain mx-auto" alt="IQNAAX">
+                    <img src="https://thestemroboai.com/logo_carousel.b92bf2a2.png" class="h-8 object-contain mx-auto" alt="STEMROBO">
+                    <img src="assets/HKL_Logo.png" class="h-5 object-contain mx-auto" alt="HKL">
+                    <img src="assets/environi logo.png" class="h-6 object-contain mx-auto" alt="Environi">
+                    <img src="assets/LOGO OF RN.jpg" class="h-6 object-contain mx-auto" alt="RN">
                 </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-neutral-100">
-                    <div class="flex items-center mb-4">
-                        <div class="flex text-yellow-500">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-neutral-600 mb-6 italic">"Outstanding AI and robotics integration! KraftIQ's innovative approach and deep technical knowledge helped us launch our EdTech platform ahead of schedule."</p>
-                    <div class="flex items-center">
-                        <img src="assets/STEM.png" 
-                             alt="Shivanna DM" 
-                             class="w-14 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <div class="font-semibold text-neutral-900">Shivanna DM</div>
-                            <div class="text-sm text-neutral-600">CEO, STEM RobAI</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-neutral-100">
-                    <div class="flex items-center mb-4">
-                        <div class="flex text-yellow-500">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-neutral-600 mb-6 italic">"Exceptional service from start to finish! KraftIQ delivered a robust automation solution that streamlined our operations and boosted productivity significantly."</p>
-                    <div class="flex items-center">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
-                             alt="Keerthi Hanuman" 
-                             class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <div class="font-semibold text-neutral-900">Keerthi Hanuman</div>
-                            <div class="text-sm text-neutral-600">Founder, Hadinakal Systems</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Clients Section -->
-    <section id="clients" class="section-padding bg-neutral-50 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <div class="inline-flex items-center bg-primary-50 rounded-full px-4 py-2 mb-6">
-                    <i class="fas fa-handshake text-primary-500 mr-2"></i>
-                    <span class="text-primary-700 font-medium text-sm">Our Clients</span>
-                </div>
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900">
-                    Trusted by Industry Leaders
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-                <!-- BIEC -->
-                <a href="https://www.biec.in/" target="_blank" rel="noopener" class="w-full max-w-sm">
-                    <div class="rounded-2xl flex items-center justify-center h-40">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpV0qrXYI4gBF7wyMH7poAegD4eC3jpEKJmQ&s" alt="BIEC Logo" class="max-h-24 md:max-h-28 object-contain"/>
-                    </div>
-                </a>
-
-                <!-- IMTMA -->
-                <a href="https://www.imtma.in/" target="_blank" rel="noopener" class="w-full max-w-sm">
-                    <div class="rounded-2xl flex items-center justify-center h-40">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/IMTMA.png" alt="IMTMA Logo" class="max-h-24 md:max-h-28 object-contain"/>
-                    </div>
-                </a>
-
-                <!-- IQNAAX -->
-                <a href="https://iqnaax.com/" target="_blank" rel="noopener" class="w-full max-w-sm">
-                    <div class="rounded-2xl flex items-center justify-center h-40">
-                        <img src="https://iqnaax.com/images/671b713bda345IQNAAX%20Logo.png" alt="IQNAAX Logo" class="max-h-24 md:max-h-28 object-contain"/>
-                    </div>
-                </a>
-
-                <!-- STEMROBO AI -->
-                <a href="https://thestemroboai.com/" target="_blank" rel="noopener" class="w-full max-w-sm">
-                    <div class="rounded-2xl flex items-center justify-center h-48 md:h-52">
-                        <img src="https://thestemroboai.com/logo_carousel.b92bf2a2.png" alt="STEMROBO AI Logo" class="max-h-40 md:max-h-42 object-contain"/>
-                    </div>
-                </a>
-
-                <!-- Hadinakal Systems -->
-                <a href="#" target="_blank" rel="noopener" class="w-full max-w-sm">
-                    <div class="rounded-2xl flex items-center justify-center h-40">
-                        <img src="assets/HKL_Logo.png" alt="Hadinakal Systems Logo" class="max-h-30 md:max-h-28 object-contain"/>
-                    </div>
-                </a>
-
-                <!-- Environi -->
-                <a href="#" target="_blank" rel="noopener" class="w-full max-w-sm">
-                    <div class="rounded-2xl flex items-center justify-center h-40">
-                        <img src="assets/environi logo.png" alt="Environi Logo" class="max-h-24 md:max-h-28 object-contain"/>
-                    </div>
-                </a>
-
-                <!-- RN -->
-                <a href="#" target="_blank" rel="noopener" class="w-full max-w-sm">
-                    <div class="rounded-2xl flex items-center justify-center h-40">
-                        <img src="assets/LOGO OF RN.jpg" alt="RN Logo" class="max-h-24 md:max-h-28 object-contain"/>
-                    </div>
-                </a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-white relative" itemscope itemtype="https://schema.org/ContactPage">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <!-- Contact Info -->
+    <section id="contact" class="section-padding bg-[#0A0A0F] text-white rounded-[40px] mx-4 my-16 relative overflow-hidden">
+        <!-- Background subtle glow -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/20 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
                 <div>
-                    <div class="inline-flex items-center bg-primary-50 rounded-full px-4 py-2 mb-6">
-                        <i class="fas fa-envelope text-primary-500 mr-2"></i>
-                        <span class="text-primary-700 font-medium text-sm">Get In Touch</span>
+                    <div class="inline-flex items-center space-x-2 bg-white/5 rounded-full px-3 py-1 mb-8">
+                        <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
+                        <span class="text-[9px] font-bold tracking-widest uppercase opacity-60 text-white">Direct Engagement</span>
                     </div>
-                    
-                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-6">
-                        Let's Build Something
-                        <span class="gradient-text">Amazing</span>
-                    </h2>
-                    
-                    <p class="text-lg text-neutral-600 mb-8">
-                        Ready to transform your ideas into reality? Get in touch with our team of experts and let's discuss how we can help you achieve your goals.
+                    <h2 class="text-4xl md:text-6xl font-serif font-bold mb-8 leading-[1.1]">Architecting Your <br> Next Innovation.</h2>
+                    <p class="text-neutral-400 text-sm mb-12 max-w-sm leading-relaxed">
+                        Ready to elevate your technological infrastructure? Engage with our engineering team to discuss your strategic roadmap and custom solution requirements.
                     </p>
                     
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
-                                <i class="fas fa-phone text-primary-600"></i>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-neutral-900">Phone</div>
-                                <div class="text-neutral-600" itemprop="telephone">+91 7019293597</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
-                                <i class="fas fa-envelope text-primary-600"></i>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-neutral-900">Email</div>
-                                <div class="text-neutral-600" itemprop="email">basavarajkasbi@gmail.com</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
-                                <i class="fas fa-map-marker-alt text-primary-600"></i>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-neutral-900">Main Branch</div>
-                                <div class="text-neutral-600" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                                    EWS109 NAVAGAR KARNATAKA CIRCLE HUBLI
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
+                        <div class="group cursor-default">
+                            <div class="text-[8px] uppercase font-bold tracking-widest opacity-30 mb-3 group-hover:opacity-50 transition-opacity">Global Inquiries</div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-white/10 transition-colors">
+                                    <i class="fas fa-envelope text-sm"></i>
                                 </div>
+                                <span class="text-sm font-medium">basavarajkasbi@gmail.com</span>
                             </div>
                         </div>
-                        
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
-                                <i class="fas fa-building text-primary-600"></i>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-neutral-900">Office Address</div>
-                                <div class="text-neutral-600">
-                                    Govindaraja Nagar Ward, PF Layout, Vijayanagar, Bengaluru, Karnataka 560040
+                        <div class="group cursor-default">
+                            <div class="text-[8px] uppercase font-bold tracking-widest opacity-30 mb-3 group-hover:opacity-50 transition-opacity">Engineering Hub</div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-white/10 transition-colors">
+                                    <i class="fas fa-phone text-sm"></i>
                                 </div>
+                                <span class="text-sm font-medium">+91-7019293597</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location info -->
+                    <div class="pt-8 border-t border-white/5">
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-location-dot text-white/20 mt-1"></i>
+                            <div>
+                                <div class="text-[10px] font-bold uppercase tracking-wider mb-1">Bangalore, India</div>
+                                <div class="text-[11px] text-neutral-500 max-w-[200px]">Strategic Engineering Center & Digital Innovation Lab</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Contact Form -->
-                <div class="bg-neutral-50 rounded-2xl p-8">
-                    <form class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-medium text-neutral-700 mb-2">First Name</label>
-                                <input type="text" class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors">
+                <div class="relative">
+                    <!-- Decorative corner elements -->
+                    <div class="absolute -top-4 -right-4 w-12 h-12 border-t-2 border-r-2 border-white/10 rounded-tr-2xl"></div>
+                    <div class="absolute -bottom-4 -left-4 w-12 h-12 border-b-2 border-l-2 border-white/10 rounded-bl-2xl"></div>
+                    
+                    <div class="bg-white/5 rounded-[32px] p-10 border border-white/10 backdrop-blur-sm relative z-10">
+                        <form class="space-y-8">
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div class="relative">
+                                    <input type="text" id="name" class="peer w-full bg-transparent border-b border-white/20 py-2 text-sm focus:outline-none focus:border-white transition-colors placeholder-transparent">
+                                    <label for="name" class="absolute left-0 -top-3.5 text-[9px] font-bold uppercase tracking-widest text-white/40 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-white/20 peer-focus:-top-3.5 peer-focus:text-[9px] peer-focus:text-white/40 cursor-text">Full Name</label>
+                                </div>
+                                <div class="relative">
+                                    <input type="email" id="email" class="peer w-full bg-transparent border-b border-white/20 py-2 text-sm focus:outline-none focus:border-white transition-colors placeholder-transparent">
+                                    <label for="email" class="absolute left-0 -top-3.5 text-[9px] font-bold uppercase tracking-widest text-white/40 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-white/20 peer-focus:-top-3.5 peer-focus:text-[9px] peer-focus:text-white/40 cursor-text">Email Address</label>
+                                </div>
                             </div>
-                            <div>
-                                <label class="block text-sm font-medium text-neutral-700 mb-2">Last Name</label>
-                                <input type="text" class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors">
+                            <div class="relative">
+                                <input type="text" id="subject" class="peer w-full bg-transparent border-b border-white/20 py-2 text-sm focus:outline-none focus:border-white transition-colors placeholder-transparent">
+                                <label for="subject" class="absolute left-0 -top-3.5 text-[9px] font-bold uppercase tracking-widest text-white/40 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-white/20 peer-focus:-top-3.5 peer-focus:text-[9px] peer-focus:text-white/40 cursor-text">Project Type</label>
                             </div>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-neutral-700 mb-2">Email</label>
-                            <input type="email" class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-neutral-700 mb-2">Subject</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-neutral-700 mb-2">Message</label>
-                            <textarea rows="4" class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-colors resize-none"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full btn-primary bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-xl font-semibold">
-                            Send Message
-                        </button>
-                    </form>
+                            <div class="relative">
+                                <textarea id="message" rows="3" class="peer w-full bg-transparent border-b border-white/20 py-2 text-sm focus:outline-none focus:border-white transition-colors placeholder-transparent resize-none"></textarea>
+                                <label for="message" class="absolute left-0 -top-3.5 text-[9px] font-bold uppercase tracking-widest text-white/40 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-white/20 peer-focus:-top-3.5 peer-focus:text-[9px] peer-focus:text-white/40 cursor-text">Brief Project Overview</label>
+                            </div>
+                            <button class="group w-full bg-white text-primary font-bold py-4 rounded-xl text-sm hover:bg-neutral-100 transition-all flex items-center justify-center space-x-3">
+                                <span>Submit Inquiry</span>
+                                <i class="fas fa-paper-plane text-[10px] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <div id="footer-placeholder"></div>
-
-    <!-- Scripts -->
-    <script>
-        // Load footer
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            });
-
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            
-            // Toggle hamburger icon
-            const icon = mobileMenuBtn.querySelector('i');
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.className = 'fas fa-bars text-xl';
-            } else {
-                icon.className = 'fas fa-times text-xl';
-            }
-        });
-        
-        // Close mobile menu when clicking on nav links
-        document.querySelectorAll('.mobile-menu .nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.className = 'fas fa-bars text-xl';
-            });
-        });
-        
-        // Navbar scroll effect - Separation effect on scroll
-        let ticking = false;
-        
-        function updateNavbar() {
-            const navbar = document.getElementById('navbar');
-            const heroSection = document.getElementById('home');
-            const heroHeight = heroSection.offsetHeight;
-            const scrollProgress = Math.min(window.scrollY / (heroHeight * 0.3), 1); // Start separating at 30% of hero height
-            
-            if (scrollProgress > 0.1) { // Start transformation after scrolling 10% of hero height
-                navbar.classList.remove('navbar-integrated');
-                navbar.classList.add('navbar-separated');
+    <footer class="bg-[#050507] pt-24 pb-12 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-4 gap-16 mb-20">
+                <div class="md:col-span-2">
+                    <img src="assets/KraftIQLogo.png" alt="KraftIQ" class="h-16 mb-8 brightness-0 invert opacity-80">
+                    <p class="text-neutral-500 text-sm max-w-sm mb-8 leading-relaxed">
+                        KraftIQ is a premier digital engineering studio dedicated to architecting high-performance ecosystems. We transform complex challenges into scalable technological realities.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all border border-white/5">
+                            <i class="fab fa-linkedin-in text-sm"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all border border-white/5">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all border border-white/5">
+                            <i class="fab fa-github text-sm"></i>
+                        </a>
+                    </div>
+                </div>
                 
-                // Add subtle scale effect during separation
-                navbar.style.transform = `translateY(${Math.max(0, (1 - scrollProgress) * -10)}px)`;
-            } else {
-                navbar.classList.remove('navbar-separated');
-                navbar.classList.add('navbar-integrated');
-                navbar.style.transform = 'translateY(0px)';
-            }
-            ticking = false;
-        }
+                <div>
+                    <h5 class="text-[10px] font-bold uppercase tracking-widest mb-8 text-white/20">Navigation</h5>
+                    <ul class="space-y-4">
+                        <li><a href="#home" class="text-sm text-neutral-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-sm text-neutral-400 hover:text-white transition-colors">Engineering Studio</a></li>
+                        <li><a href="services.html" class="text-sm text-neutral-400 hover:text-white transition-colors">Capabilities</a></li>
+                        <li><a href="products.html" class="text-sm text-neutral-400 hover:text-white transition-colors">Product Ecosystem</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="text-[10px] font-bold uppercase tracking-widest mb-8 text-white/20">Contact</h5>
+                    <ul class="space-y-4">
+                        <li class="text-sm text-neutral-400">basavarajkasbi@gmail.com</li>
+                        <li class="text-sm text-neutral-400">+91-7019293597</li>
+                        <li class="text-sm text-neutral-400">Bangalore, India</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-[10px] font-bold uppercase tracking-widest text-white/10">
+                    © 2026 KraftIQ Technologies. All rights reserved.
+                </div>
+                <div class="flex space-x-8">
+                    <a href="#" class="text-[9px] font-bold uppercase tracking-widest text-white/10 hover:text-white/40 transition-colors">Privacy Protocol</a>
+                    <a href="#" class="text-[9px] font-bold uppercase tracking-widest text-white/10 hover:text-white/40 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
         
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(updateNavbar);
-                ticking = true;
-            }
-        });
-        
-        // Smooth scrolling for navigation links with navbar offset
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    // Responsive navbar height - smaller on mobile
-                    const isMobile = window.innerWidth < 640;
-                    const navbarHeight = isMobile ? 64 : 80;
-                    const targetPosition = target.offsetTop - navbarHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
+        <!-- Decorative background text -->
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-bold text-white/[0.02] whitespace-nowrap pointer-events-none select-none leading-none -mb-[5vw]">
+            KRAFTIQ
+        </div>
+    </footer>
+
+    <script>
         // GSAP Animations
         gsap.registerPlugin(ScrollTrigger);
         
-        // Animate elements on scroll
-        gsap.utils.toArray('.animate-slide-up').forEach(element => {
-            gsap.fromTo(element, 
-                { y: 50, opacity: 0 },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 0.8,
-                    ease: "power2.out",
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-sticky-scrolled');
+            } else {
+                navbar.classList.remove('nav-sticky-scrolled');
+            }
+        });
+
+        // Initial animations
+        gsap.to(".animate-up", {
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            stagger: 0.15,
+            ease: "power4.out"
+        });
+
+        // Section reveals
+        gsap.utils.toArray("section").forEach(section => {
+            const h2 = section.querySelector('h2');
+            if (h2) {
+                gsap.from(h2, {
+                    opacity: 0,
+                    y: 30,
+                    duration: 1,
                     scrollTrigger: {
-                        trigger: element,
-                        start: "top 80%",
-                        end: "bottom 20%",
+                        trigger: h2,
+                        start: "top 85%",
                         toggleActions: "play none none reverse"
                     }
-                }
-            );
+                });
+            }
         });
-        
-        gsap.utils.toArray('.animate-scale-in').forEach(element => {
-            gsap.fromTo(element, 
-                { scale: 0.8, opacity: 0 },
-                {
-                    scale: 1,
-                    opacity: 1,
-                    duration: 0.6,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: element,
-                        start: "top 80%",
-                        end: "bottom 20%",
-                        toggleActions: "play none none reverse"
-                    }
+
+        // Scroll animations for cards
+        gsap.utils.toArray(".premium-shadow, .premium-shadow-large").forEach(card => {
+            gsap.from(card, {
+                opacity: 0,
+                y: 40,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 90%",
+                    toggleActions: "play none none reverse"
                 }
-            );
-        });
-        
-        // Parallax effect for floating elements
-        gsap.utils.toArray('.animate-float').forEach(element => {
-            gsap.to(element, {
-                y: -30,
-                duration: 2,
-                ease: "power1.inOut",
-                yoyo: true,
-                repeat: -1
             });
         });
-        
-        // Form submission (placeholder)
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We\'ll get back to you soon.');
-        });
-        
-        // Add loading animation to buttons
-        document.querySelectorAll('.btn-primary').forEach(button => {
-            button.addEventListener('click', function() {
-                const originalText = this.innerHTML;
-                this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Loading...';
-                this.disabled = true;
-                
-                setTimeout(() => {
-                    this.innerHTML = originalText;
-                    this.disabled = false;
-                }, 2000);
+
+        // Interactive card tilt
+        const card = document.querySelector('.debit-card');
+        if(card) {
+            document.addEventListener('mousemove', (e) => {
+                const xAxis = (window.innerWidth / 2 - e.pageX) / 40;
+                const yAxis = (window.innerHeight / 2 - e.pageY) / 40;
+                card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
             });
-        });
+            
+            document.addEventListener('mouseleave', () => {
+                card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+            });
+        }
     </script>
 </body>
 </html>

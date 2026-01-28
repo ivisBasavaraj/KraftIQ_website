@@ -3,398 +3,339 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Management Case Studies | KraftIQ - DMS Solutions & Workflow Automation</title>
-    <meta name="description" content="Discover real-world document management case studies showing how KraftIQ's intelligent Document Tracker transforms business workflows, automation, compliance, and efficiency. Industry-proven DMS solutions for manufacturing, healthcare, construction, and finance.">
-    <meta name="keywords" content="document management system, workflow automation, document tracking software, digital document management, compliance tracking, business process automation, document workflow management, enterprise DMS">
-    <meta name="author" content="KraftIQ">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="canonical" href="https://www.kraftiq.com/case-studies.html">
-    <meta property="og:title" content="Document Management Case Studies | KraftIQ Document Tracker">
-    <meta property="og:description" content="Real-world case studies of intelligent document management and workflow automation success">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://www.kraftiq.com/assets/og-image.jpg">
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Document Management Case Studies",
-        "description": "Real-world success stories of intelligent document tracking and workflow automation",
-        "url": "https://www.kraftiq.com/case-studies.html",
-        "mainEntity": {
-            "@type": "Organization",
-            "name": "KraftIQ",
-            "logo": "https://www.kraftiq.com/assets/logo.jpg",
-            "sameAs": ["https://www.kraftiq.com"]
-        }
-    }
-    </script>
-
+    
+    <!-- Primary Meta Tags -->
+    <title>Case Studies - KraftIQ | Real-World Success Stories</title>
+    <meta name="title" content="Case Studies - KraftIQ | Real-World Success Stories">
+    <meta name="description" content="Discover how KraftIQ's intelligent solutions transform business workflows, automation, and efficiency through our comprehensive case studies.">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon.png">
-
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-
+    
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         primary: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            200: '#bfdbfe',
-                            300: '#93c5fd',
-                            400: '#60a5fa',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#1e3a8a',
+                            DEFAULT: '#121217',
+                            light: '#1C1C22',
                         },
-                        neutral: {
-                            50: '#ffffff',
-                            100: '#f8fafc',
-                            200: '#f1f5f9',
-                            300: '#e2e8f0',
-                            400: '#cbd5e1',
-                            500: '#94a3b8',
-                            600: '#64748b',
-                            700: '#475569',
-                            800: '#334155',
-                            900: '#1e293b',
+                        accent: {
+                            DEFAULT: '#2B2B31',
+                            grey: '#F6F7F9',
+                            muted: '#6B7280',
                         }
                     },
                     fontFamily: {
                         'sans': ['Inter', 'system-ui', 'sans-serif'],
                         'serif': ['Playfair Display', 'serif'],
+                    },
+                    borderRadius: {
+                        'xl': '18px',
+                        '2xl': '22px',
+                        '3xl': '32px',
+                    },
+                    boxShadow: {
+                        'premium': '0 15px 40px rgba(0,0,0,0.08)',
+                        'card-float': '0 30px 60px rgba(0,0,0,0.12)',
                     }
                 }
             }
         }
     </script>
-
+    
     <style>
-        .font-archivo-black { font-family: 'Archivo Black', sans-serif; }
-        .gradient-text {
-            background: linear-gradient(135deg, #3b82f6, #60a5fa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        :root {
+            --rich-black: #121217;
+            --soft-grey: #F6F7F9;
+            --border-light: rgba(0, 0, 0, 0.08);
+            --border-dark: rgba(255, 255, 255, 0.1);
         }
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+        body {
+            background-color: white;
+            color: var(--rich-black);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+
+        .premium-shadow { box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+        .premium-shadow-large { box-shadow: 0 30px 60px rgba(0,0,0,0.12); }
+        
+        /* Navigation */
+        .nav-sticky {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-light);
+            transition: all 0.3s ease;
         }
-        .hero-gradient {
-            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
-            background-size: 200% 200%;
-            animation: gradientShift 8s ease infinite;
+
+        /* Compact Section Spacing */
+        .section-padding { padding: 80px 0; }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        .floating {
-            animation: floating 6s ease-in-out infinite;
-        }
-        @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+        .animate-up { opacity: 0; animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #121217; border-radius: 10px; }
+
+        @media (max-width: 1024px) {
+            .section-padding { padding: 60px 0; }
         }
     </style>
 </head>
 
-<body class="font-sans text-neutral-900">
+<body class="font-sans">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-neutral-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 sm:h-20">
-                <div class="flex items-center">
-                    <a href="index.html">
-                        <img src="assets/KraftIQLogo.png" alt="KraftIQ Logo" class="h-28 sm:h-36 md:h-40 w-auto transition-all duration-500">
-                    </a>
-                </div>
-
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">Home</a>
-                    <a href="about.html" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">About Us</a>
-                    <a href="index.html#services" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">Services</a>
-                    <a href="products.html" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">Products</a>
-                    <a href="index.html#contact" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">Contact</a>
-                </div>
-
-                <button class="md:hidden text-neutral-700" id="mobile-menu-btn">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
+    <nav class="fixed top-0 w-full z-50 nav-sticky" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="assets/KraftIQLogo.png" alt="KraftIQ Logo" class="h-20 w-auto">
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Home</a>
+                <a href="about.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">About</a>
+                <a href="services.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Services</a>
+                <a href="products.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Products</a>
+                <a href="index.html#contact" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Contact</a>
             </div>
-        </div>
-
-        <div class="mobile-menu md:hidden bg-white/95 backdrop-blur-lg hidden" id="mobile-menu">
-            <div class="px-4 py-6 space-y-4">
-                <a href="index.html" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Home</a>
-                <a href="about.html" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">About Us</a>
-                <a href="index.html#services" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Services</a>
-                <a href="products.html" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Products</a>
-                <a href="index.html#contact" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Contact</a>
-            </div>
+            
+            <a href="index.html#contact" class="bg-primary text-white px-6 py-2 rounded-full text-[13px] font-bold hover:scale-105 transition-transform">
+                Get Started
+            </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary-50 to-neutral-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-flex items-center bg-primary-100 rounded-full px-4 py-2 mb-6">
-                <i class="fas fa-clipboard-check text-primary-600 mr-2"></i>
-                <span class="text-primary-700 font-medium text-sm">Enterprise Document Management Success Stories</span>
+    <section class="pt-32 pb-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center animate-up">
+            <div class="inline-flex items-center space-x-2 bg-neutral-100 rounded-full px-3 py-1 mb-6">
+                <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                <span class="text-[9px] font-bold tracking-widest uppercase opacity-60">Success Stories</span>
             </div>
-            <h1 class="text-4xl md:text-6xl font-serif font-bold text-neutral-900 mb-6">
-                Document Management <span class="gradient-text">Case Studies</span>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold leading-[1.1] mb-6 tracking-tight">
+                Document <br> <span class="text-neutral-400">Management.</span>
             </h1>
-            <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
-                Discover how Fortune 500 companies and industry leaders have optimized their document workflows, business process automation, and compliance tracking with KraftIQ's enterprise document management system and intelligent DMS solution.
+            <p class="text-lg text-neutral-500 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Discover how industry leaders have optimized their workflows and compliance tracking with KraftIQ's intelligent DMS solutions.
             </p>
         </div>
     </section>
 
     <!-- Case Studies Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="section-padding bg-neutral-50">
+        <div class="max-w-7xl mx-auto px-6">
 
             <!-- Case Study 1: Manufacturing Company -->
-            <div class="mb-32">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="inline-flex items-center bg-blue-50 rounded-full px-4 py-2 mb-6">
-                            <i class="fas fa-industry text-blue-600 mr-2"></i>
-                            <span class="text-blue-700 font-medium text-sm">Manufacturing - Digital Transformation</span>
+            <div class="mb-24">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="animate-up">
+                        <div class="inline-flex items-center space-x-2 bg-white rounded-full px-3 py-1 mb-6 premium-shadow">
+                            <i class="fas fa-industry text-primary text-[10px]"></i>
+                            <span class="text-[9px] font-bold tracking-widest uppercase opacity-60">Manufacturing</span>
                         </div>
-                        <h2 class="text-3xl font-serif font-bold text-neutral-900 mb-6">
-                            Automotive Manufacturer Achieves 75% Document Processing Efficiency with Enterprise Document Management System
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-6 leading-tight">
+                            Automotive Manufacturer Achieves 75% Document Processing Efficiency
                         </h2>
-                        <p class="text-lg text-neutral-600 mb-6">
-                            A leading Fortune 500 automotive parts manufacturer with 500+ global vendors streamlined their supply chain document management using AI-powered workflow automation and intelligent document tracking technology.
+                        <p class="text-lg text-neutral-500 mb-8 leading-relaxed">
+                            A leading Fortune 500 automotive parts manufacturer streamlined their supply chain document management using AI-powered workflow automation.
                         </p>
-                        <div class="space-y-4 mb-8">
-                            <div class="flex items-start">
-                                <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                    <i class="fas fa-times text-red-600 text-xs"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-neutral-900">Challenge</h4>
-                                    <p class="text-neutral-600">Manual document processing of 10,000+ monthly vendor documents created workflow bottlenecks, compliance gaps, and 40% approval delays across the supply chain</p>
-                                </div>
+                        
+                        <div class="grid grid-cols-3 gap-4 mb-8">
+                            <div class="bg-white p-4 rounded-2xl premium-shadow border border-neutral-100">
+                                <div class="text-2xl font-bold text-primary">75%</div>
+                                <div class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Efficiency</div>
                             </div>
-                            <div class="flex items-start">
-                                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                    <i class="fas fa-check text-green-600 text-xs"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-neutral-900">Solution</h4>
-                                    <p class="text-neutral-600">Implemented KraftIQ's cloud-based DMS with automated document workflows, OCR technology, intelligent routing, real-time monitoring, and audit trail capabilities</p>
-                                </div>
+                            <div class="bg-white p-4 rounded-2xl premium-shadow border border-neutral-100">
+                                <div class="text-2xl font-bold text-primary">99.8%</div>
+                                <div class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Compliance</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-2xl premium-shadow border border-neutral-100">
+                                <div class="text-2xl font-bold text-primary">$2.3M</div>
+                                <div class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Savings</div>
                             </div>
                         </div>
-                        <div class="grid grid-cols-3 gap-4">
-                            <div class="text-center p-4 bg-primary-50 rounded-lg">
-                                <div class="text-2xl font-bold text-primary-600">75%</div>
-                                <div class="text-sm text-neutral-600">Processing Efficiency</div>
-                            </div>
-                            <div class="text-center p-4 bg-green-50 rounded-lg">
-                                <div class="text-2xl font-bold text-green-600">99.8%</div>
-                                <div class="text-sm text-neutral-600">Compliance Rate</div>
-                            </div>
-                            <div class="text-center p-4 bg-blue-50 rounded-lg">
-                                <div class="text-2xl font-bold text-blue-600">$2.3M</div>
-                                <div class="text-sm text-neutral-600">Annual Cost Reduction</div>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-check text-white text-[10px]"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary text-sm mb-1 font-serif">The Challenge</h4>
+                                    <p class="text-neutral-500 text-sm leading-relaxed">Manual processing of 10,000+ monthly documents created workflow bottlenecks and compliance gaps.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop" alt="Modern manufacturing facility with digital document management and supply chain automation technology" class="rounded-2xl shadow-2xl w-full h-96 object-cover mb-6">
-
+                    <div class="relative animate-up">
+                        <div class="rounded-3xl overflow-hidden premium-shadow">
+                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop" alt="Manufacturing" class="w-full h-[450px] object-cover">
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Case Study 2: Healthcare System -->
-            <div class="mb-32">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="lg:order-2">
-                        <div class="inline-flex items-center bg-green-50 rounded-full px-4 py-2 mb-6">
-                            <i class="fas fa-hospital text-green-600 mr-2"></i>
-                            <span class="text-green-700 font-medium text-sm">Healthcare - Regulatory Compliance</span>
+            <div class="mb-24">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="lg:order-2 animate-up">
+                        <div class="inline-flex items-center space-x-2 bg-white rounded-full px-3 py-1 mb-6 premium-shadow">
+                            <i class="fas fa-hospital text-primary text-[10px]"></i>
+                            <span class="text-[9px] font-bold tracking-widest uppercase opacity-60">Healthcare</span>
                         </div>
-                        <h2 class="text-3xl font-serif font-bold text-neutral-900 mb-6">
-                            15-Hospital Network Achieves 100% HIPAA Compliance with Intelligent Document Management
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-6 leading-tight">
+                            15-Hospital Network Achieves 100% HIPAA Compliance
                         </h2>
-                        <p class="text-lg text-neutral-600 mb-6">
-                            A regional healthcare network encompassing 15 hospitals modernized their medical equipment vendor documentation management with HIPAA-compliant DMS and automated approval workflows to maintain regulatory standards.
+                        <p class="text-lg text-neutral-500 mb-8 leading-relaxed">
+                            A regional healthcare network modernized their medical equipment vendor documentation management with HIPAA-compliant DMS.
                         </p>
-                        <div class="space-y-4 mb-8">
-                            <div class="flex items-start">
-                                <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                    <i class="fas fa-times text-red-600 text-xs"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-neutral-900">Challenge</h4>
-                                    <p class="text-neutral-600">Complex HIPAA, FDA, and Joint Commission regulatory requirements with multi-stage approvals, compliance tracking, and encrypted data handling across decentralized hospital systems</p>
-                                </div>
+                        
+                        <div class="grid grid-cols-3 gap-4 mb-8">
+                            <div class="bg-white p-4 rounded-2xl premium-shadow border border-neutral-100">
+                                <div class="text-2xl font-bold text-primary">100%</div>
+                                <div class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Compliance</div>
                             </div>
-                            <div class="flex items-start">
-                                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                    <i class="fas fa-check text-green-600 text-xs"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-neutral-900">Solution</h4>
-                                    <p class="text-neutral-600">Deployed HIPAA-compliant DMS with automated approval routing, digital signatures, blockchain-powered audit trails, end-to-end encryption, and comprehensive compliance reporting</p>
-                                </div>
+                            <div class="bg-white p-4 rounded-2xl premium-shadow border border-neutral-100">
+                                <div class="text-2xl font-bold text-primary">60%</div>
+                                <div class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Time Saved</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-2xl premium-shadow border border-neutral-100">
+                                <div class="text-2xl font-bold text-primary">Zero</div>
+                                <div class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Violations</div>
                             </div>
                         </div>
-                        <div class="grid grid-cols-3 gap-4">
-                            <div class="text-center p-4 bg-green-50 rounded-lg">
-                                <div class="text-2xl font-bold text-green-600">100%</div>
-                                <div class="text-sm text-neutral-600">Regulatory Compliance</div>
-                            </div>
-                            <div class="text-center p-4 bg-blue-50 rounded-lg">
-                                <div class="text-2xl font-bold text-blue-600">60%</div>
-                                <div class="text-sm text-neutral-600">Audit Time Reduction</div>
-                            </div>
-                            <div class="text-center p-4 bg-orange-50 rounded-lg">
-                                <div class="text-2xl font-bold text-orange-600">Zero</div>
-                                <div class="text-sm text-neutral-600">Compliance Violations</div>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-check text-white text-[10px]"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary text-sm mb-1 font-serif">The Solution</h4>
+                                    <p class="text-neutral-500 text-sm leading-relaxed">Deployed HIPAA-compliant DMS with automated approval routing and digital signatures.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="lg:order-1">
-                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop" alt="Healthcare professionals reviewing HIPAA-compliant medical documentation and patient records" class="rounded-2xl shadow-2xl w-full h-96 object-cover mb-6">
-
+                    <div class="lg:order-1 relative animate-up">
+                        <div class="rounded-3xl overflow-hidden premium-shadow">
+                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop" alt="Healthcare" class="w-full h-[450px] object-cover">
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Case Study 3: Construction Company -->
-            <div class="mb-32">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="inline-flex items-center bg-orange-50 rounded-full px-4 py-2 mb-6">
-                            <i class="fas fa-hard-hat text-orange-600 mr-2"></i>
-                            <span class="text-orange-700 font-medium text-sm">Construction - Project Management</span>
+            <div class="mb-24">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="animate-up">
+                        <div class="inline-flex items-center space-x-2 bg-white rounded-full px-3 py-1 mb-6 premium-shadow">
+                            <i class="fas fa-hard-hat text-primary text-[10px]"></i>
+                            <span class="text-[9px] font-bold tracking-widest uppercase opacity-60">Construction</span>
                         </div>
-                        <h2 class="text-3xl font-serif font-bold text-neutral-900 mb-6">
-                            Major Construction Firm Optimizes 50+ Concurrent Projects with Centralized Document Management System
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-6 leading-tight">
+                            Major Construction Firm Optimizes 50+ Concurrent Projects
                         </h2>
-                        <p class="text-lg text-neutral-600 mb-6">
-                            A large construction enterprise managing 50+ concurrent projects requiring seamless coordination between contractors, architects, consultants, inspectors, and regulatory authorities implemented a unified enterprise DMS.
+                        <p class="text-lg text-neutral-500 mb-8 leading-relaxed">
+                            A large construction enterprise implemented a unified enterprise DMS for seamless coordination between contractors and architects.
                         </p>
-                        <div class="space-y-4 mb-8">
-                            <div class="flex items-start">
-                                <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                    <i class="fas fa-times text-red-600 text-xs"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-neutral-900">Challenge</h4>
-                                    <p class="text-neutral-600">Fragmented document workflows across 50+ projects with diverse stakeholders, version control issues, delayed approvals, and regulatory compliance tracking across construction documentation</p>
-                                </div>
+                        
+                        <div class="grid grid-cols-3 gap-4 mb-8">
+                            <div class="bg-white p-4 rounded-2xl premium-shadow border border-neutral-100">
+                                <div class="text-2xl font-bold text-primary">50+</div>
+                                <div class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Projects</div>
                             </div>
-                            <div class="flex items-start">
-                                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                    <i class="fas fa-check text-green-600 text-xs"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-neutral-900">Solution</h4>
-                                    <p class="text-neutral-600">Implemented centralized cloud-based DMS with project-specific dashboards, role-based access control, real-time notifications, automated routing, version management, and mobile accessibility</p>
-                                </div>
+                            <div class="bg-white p-4 rounded-2xl premium-shadow border border-neutral-100">
+                                <div class="text-2xl font-bold text-primary">85%</div>
+                                <div class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Faster</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-2xl premium-shadow border border-neutral-100">
+                                <div class="text-2xl font-bold text-primary">$1.5M</div>
+                                <div class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Savings</div>
                             </div>
                         </div>
-                        <div class="grid grid-cols-3 gap-4">
-                            <div class="text-center p-4 bg-orange-50 rounded-lg">
-                                <div class="text-2xl font-bold text-orange-600">50+</div>
-                                <div class="text-sm text-neutral-600">Active Projects Managed</div>
-                            </div>
-                            <div class="text-center p-4 bg-primary-50 rounded-lg">
-                                <div class="text-2xl font-bold text-primary-600">85%</div>
-                                <div class="text-sm text-neutral-600">Faster Approvals</div>
-                            </div>
-                            <div class="text-center p-4 bg-green-50 rounded-lg">
-                                <div class="text-2xl font-bold text-green-600">$1.5M</div>
-                                <div class="text-sm text-neutral-600">Operational Savings</div>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-check text-white text-[10px]"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary text-sm mb-1 font-serif">The Impact</h4>
+                                    <p class="text-neutral-500 text-sm leading-relaxed">Centralized cloud-based DMS with project-specific dashboards and version control.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <img src="https://images.unsplash.com/photo-1589939705882-68295007ba30?w=800&h=600&fit=crop" alt="Construction site with blueprint documents, digital project management, and building documentation" class="rounded-2xl shadow-2xl w-full h-96 object-cover mb-6">
-
+                    <div class="relative animate-up">
+                        <div class="rounded-3xl overflow-hidden premium-shadow">
+                            <img src="https://images.unsplash.com/photo-1589939705882-68295007ba30?w=800&h=600&fit=crop" alt="Construction" class="w-full h-[450px] object-cover">
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Case Study 4: Financial Services -->
-            <div class="mb-20">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="lg:order-2">
-                        <div class="inline-flex items-center bg-blue-50 rounded-full px-4 py-2 mb-6">
-                            <i class="fas fa-university text-blue-600 mr-2"></i>
-                            <span class="text-blue-700 font-medium text-sm">Financial Services - Compliance & Security</span>
+            <div class="mb-24">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="lg:order-2 animate-up">
+                        <div class="inline-flex items-center space-x-2 bg-white rounded-full px-3 py-1 mb-6 premium-shadow">
+                            <i class="fas fa-university text-primary text-[10px]"></i>
+                            <span class="text-[9px] font-bold tracking-widest uppercase opacity-60">Finance</span>
                         </div>
-                        <h2 class="text-3xl font-serif font-bold text-neutral-900 mb-6">
-                            Investment Bank Accelerates Vendor Due Diligence with Secure DMS and Advanced Encryption
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-6 leading-tight">
+                            Investment Bank Accelerates Vendor Due Diligence
                         </h2>
-                        <p class="text-lg text-neutral-600 mb-6">
-                            A mid-tier investment bank modernized their vendor KYC (Know Your Customer) and AML (Anti-Money Laundering) due diligence workflows using a secure, enterprise-grade document management system with regulatory compliance features.
+                        <p class="text-lg text-neutral-500 mb-8 leading-relaxed">
+                            A mid-tier investment bank modernized their vendor KYC and AML due diligence workflows using a secure, enterprise-grade DMS.
                         </p>
-                        <div class="space-y-4 mb-8">
-                            <div class="flex items-start">
-                                <div class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                    <i class="fas fa-times text-red-600 text-xs"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-neutral-900">Challenge</h4>
-                                    <p class="text-neutral-600">Complex KYC/AML compliance requirements, multi-tier security protocols, encrypted data handling, SOX compliance tracking, and immutable audit logs for regulatory examinations</p>
-                                </div>
+                        
+                        <div class="grid grid-cols-3 gap-4 mb-8">
+                            <div class="bg-white p-4 rounded-2xl premium-shadow border border-neutral-100">
+                                <div class="text-2xl font-bold text-primary">90%</div>
+                                <div class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Faster</div>
                             </div>
-                            <div class="flex items-start">
-                                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                    <i class="fas fa-check text-green-600 text-xs"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-neutral-900">Solution</h4>
-                                    <p class="text-neutral-600">Deployed SOC 2 Type II certified DMS with AES-256 encryption, digital signatures, blockchain-backed audit trails, automated compliance workflows, and multi-factor authentication</p>
-                                </div>
+                            <div class="bg-white p-4 rounded-2xl premium-shadow border border-neutral-100">
+                                <div class="text-2xl font-bold text-primary">100%</div>
+                                <div class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Audit-Ready</div>
                             </div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-4">
-                            <div class="text-center p-4 bg-blue-50 rounded-lg">
-                                <div class="text-2xl font-bold text-blue-600">90%</div>
-                                <div class="text-sm text-neutral-600">Faster Diligence Reviews</div>
-                            </div>
-                            <div class="text-center p-4 bg-green-50 rounded-lg">
-                                <div class="text-2xl font-bold text-green-600">100%</div>
-                                <div class="text-sm text-neutral-600">Regulatory Audit Ready</div>
-                            </div>
-                            <div class="text-center p-4 bg-orange-50 rounded-lg">
-                                <div class="text-2xl font-bold text-orange-600">Zero</div>
-                                <div class="text-sm text-neutral-600">Data Security Incidents</div>
+                            <div class="bg-white p-4 rounded-2xl premium-shadow border border-neutral-100">
+                                <div class="text-2xl font-bold text-primary">Zero</div>
+                                <div class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">Incidents</div>
                             </div>
                         </div>
                     </div>
-                    <div class="lg:order-1">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop" alt="Investment banking professionals analyzing financial documents with secure document management systems" class="rounded-2xl shadow-2xl w-full h-96 object-cover mb-6">
-
+                    <div class="lg:order-1 relative animate-up">
+                        <div class="rounded-3xl overflow-hidden premium-shadow">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop" alt="Finance" class="w-full h-[450px] object-cover">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -403,139 +344,143 @@
     </section>
 
     <!-- Key Benefits Section -->
-    <section class="py-20 bg-neutral-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 mb-6">
-                    Why Enterprise Organizations Choose <span class="gradient-text">KraftIQ Document Management Platform</span>
+    <section class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 animate-up">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
+                    Why Choose KraftIQ
                 </h2>
-                <p class="text-lg text-neutral-600 max-w-3xl mx-auto">
-                    Proven benefits across automated workflow processing, compliance management, and enterprise DMS deployment
+                <p class="text-lg text-neutral-500 max-w-2xl mx-auto">
+                    Proven benefits across automated workflow processing and enterprise compliance management.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-clock text-primary-600 text-2xl"></i>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-neutral-50 rounded-3xl p-8 border border-neutral-100 animate-up">
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 premium-shadow">
+                        <i class="fas fa-clock text-primary text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-neutral-900 mb-2">Workflow Automation</h3>
-                    <p class="text-neutral-600">70% average reduction in document processing time with intelligent routing and automated approvals</p>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-serif">Automation</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">70% average reduction in document processing time with intelligent routing.</p>
                 </div>
 
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
+                <div class="bg-neutral-50 rounded-3xl p-8 border border-neutral-100 animate-up">
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 premium-shadow">
+                        <i class="fas fa-shield-alt text-primary text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-neutral-900 mb-2">Regulatory Compliance</h3>
-                    <p class="text-neutral-600">100% audit readiness with automated compliance tracking, immutable audit logs, and regulatory reporting</p>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-serif">Compliance</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">100% audit readiness with automated tracking and immutable logs.</p>
                 </div>
 
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-eye text-blue-600 text-2xl"></i>
+                <div class="bg-neutral-50 rounded-3xl p-8 border border-neutral-100 animate-up">
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 premium-shadow">
+                        <i class="fas fa-eye text-primary text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-neutral-900 mb-2">Real-Time Visibility</h3>
-                    <p class="text-neutral-600">End-to-end document tracking with live dashboards, status notifications, and workflow analytics</p>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-serif">Visibility</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">End-to-end tracking with live dashboards and workflow analytics.</p>
                 </div>
 
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-dollar-sign text-orange-600 text-2xl"></i>
+                <div class="bg-neutral-50 rounded-3xl p-8 border border-neutral-100 animate-up">
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 premium-shadow">
+                        <i class="fas fa-dollar-sign text-primary text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-neutral-900 mb-2">Cost Optimization</h3>
-                    <p class="text-neutral-600">40% average reduction in administrative overhead, staffing costs, and processing expenses</p>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-serif">Efficiency</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">40% reduction in overhead and processing expenses across enterprises.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Feature Showcase Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 mb-6">
-                    KraftIQ Document Management Platform <span class="gradient-text">In Action</span>
-                </h2>
-                <p class="text-lg text-neutral-600 max-w-3xl mx-auto">
-                    Advanced DMS features transforming enterprise document workflows and business process automation
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-neutral-100">
-                    <img src="photo_2025-12-05_17-56-56.jpg" alt="Enterprise document workflow automation and intelligent routing process" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-neutral-900 mb-2">Intelligent Workflow Automation</h3>
-                        <p class="text-neutral-600">AI-powered automated routing, intelligent task assignment, OCR processing, and seamless integration with enterprise systems</p>
-                    </div>
-                </div>
-
-                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-neutral-100">
-                    <img src="download (2).jpg" alt="Real-time document management dashboard with analytics and KPIs" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-neutral-900 mb-2">Advanced Analytics Dashboard</h3>
-                        <p class="text-neutral-600">Real-time monitoring with comprehensive KPIs, workflow analytics, compliance metrics, and predictive insights</p>
-                    </div>
-                </div>
-
-                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-neutral-100">
-                    <img src="images.png" alt="Intuitive document management system interface with user-friendly design" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-neutral-900 mb-2">Enterprise-Grade Security</h3>
-                        <p class="text-neutral-600">End-to-end encryption, multi-factor authentication, role-based access control, and full audit trail capabilities</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-20 bg-primary-600">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
-                Transform Your Enterprise Document Management & Workflows Today
-            </h2>
-            <p class="text-xl text-primary-100 mb-8">
-                Join 500+ enterprises across manufacturing, healthcare, construction, and finance that have optimized their document workflows, automated business processes, and achieved regulatory compliance with KraftIQ's intelligent DMS platform.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="index.html#contact" class="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-colors">
-                    Request Demo - Document Management System
-                </a>
-                <a href="products.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors">
-                    Explore All DMS Solutions
-                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-neutral-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="flex justify-center -mt-24 mb-0">
-                    <img src="assets/KraftIQLogo.png" alt="KraftIQ Logo" class="w-40 md:w-48 lg:w-56 h-auto">
+    <footer class="bg-[#050507] pt-24 pb-12 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-4 gap-16 mb-20">
+                <div class="md:col-span-2">
+                    <img src="assets/KraftIQLogo.png" alt="KraftIQ" class="h-16 mb-8 brightness-0 invert opacity-80">
+                    <p class="text-neutral-500 text-sm max-w-sm mb-8 leading-relaxed">
+                        KraftIQ is a premier digital engineering studio dedicated to architecting high-performance ecosystems. We transform complex challenges into scalable technological realities.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all border border-white/5">
+                            <i class="fab fa-linkedin-in text-sm"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all border border-white/5">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all border border-white/5">
+                            <i class="fab fa-github text-sm"></i>
+                        </a>
+                    </div>
                 </div>
-                <p class="text-neutral-400 mb-6">Empowering innovation through cutting-edge technology solutions.</p>
-                <div class="text-neutral-400 text-sm">
-                    © 2024 KraftIQ. All rights reserved.
+                
+                <div>
+                    <h5 class="text-[10px] font-bold uppercase tracking-widest mb-8 text-white/20">Navigation</h5>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-sm text-neutral-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-sm text-neutral-400 hover:text-white transition-colors">Engineering Studio</a></li>
+                        <li><a href="services.html" class="text-sm text-neutral-400 hover:text-white transition-colors">Capabilities</a></li>
+                        <li><a href="products.html" class="text-sm text-neutral-400 hover:text-white transition-colors">Product Ecosystem</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="text-[10px] font-bold uppercase tracking-widest mb-8 text-white/20">Contact</h5>
+                    <ul class="space-y-4">
+                        <li class="text-sm text-neutral-400">basavarajkasbi@gmail.com</li>
+                        <li class="text-sm text-neutral-400">+91-7019293597</li>
+                        <li class="text-sm text-neutral-400">Bangalore, India</li>
+                    </ul>
                 </div>
             </div>
+            
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-[10px] font-bold uppercase tracking-widest text-white/10">
+                    © 2026 KraftIQ Technologies. All rights reserved.
+                </div>
+                <div class="flex space-x-8">
+                    <a href="#" class="text-[9px] font-bold uppercase tracking-widest text-white/10 hover:text-white/40 transition-colors">Privacy Protocol</a>
+                    <a href="#" class="text-[9px] font-bold uppercase tracking-widest text-white/10 hover:text-white/40 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative background text -->
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-bold text-white/[0.02] whitespace-nowrap pointer-events-none select-none leading-none -mb-[5vw]">
+            KRAFTIQ
         </div>
     </footer>
 
     <script>
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+        // Initialize GSAP ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            const icon = mobileMenuBtn.querySelector('i');
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.className = 'fas fa-bars text-xl';
+        // Animate elements on scroll
+        gsap.utils.toArray('.animate-up').forEach((element) => {
+            gsap.fromTo(element, 
+                { opacity: 0, y: 30 },
+                { 
+                    opacity: 1, 
+                    y: 0, 
+                    duration: 1, 
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 85%",
+                        toggleActions: "play none none none"
+                    }
+                }
+            );
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2');
+                navbar.style.background = "rgba(255, 255, 255, 0.95)";
             } else {
-                icon.className = 'fas fa-times text-xl';
+                navbar.classList.remove('py-2');
+                navbar.style.background = "rgba(255, 255, 255, 0.9)";
             }
         });
     </script>

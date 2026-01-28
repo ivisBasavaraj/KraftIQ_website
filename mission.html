@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
     <title>Our Mission - KraftIQ | Transforming Ideas into Reality</title>
+    <meta name="title" content="Our Mission - KraftIQ | Transforming Ideas into Reality">
     <meta name="description" content="Discover KraftIQ's mission to transform innovative ideas into practical technology solutions that drive business growth and create lasting impact.">
     
     <!-- Favicon -->
@@ -14,7 +17,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -22,39 +24,37 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         primary: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            200: '#bfdbfe',
-                            300: '#93c5fd',
-                            400: '#60a5fa',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#1e3a8a',
+                            DEFAULT: '#121217',
+                            light: '#1C1C22',
                         },
-                        secondary: {
-                            50: '#fafafa',
-                            100: '#f4f4f5',
-                            200: '#e4e4e7',
-                            300: '#d4d4d8',
-                            400: '#a1a1aa',
-                            500: '#71717a',
-                            600: '#52525b',
-                            700: '#3f3f46',
-                            800: '#27272a',
-                            900: '#18181b',
+                        accent: {
+                            DEFAULT: '#2B2B31',
+                            grey: '#F6F7F9',
+                            muted: '#6B7280',
                         }
                     },
                     fontFamily: {
                         'sans': ['Inter', 'system-ui', 'sans-serif'],
                         'serif': ['Playfair Display', 'serif'],
+                    },
+                    borderRadius: {
+                        'xl': '18px',
+                        '2xl': '22px',
+                        '3xl': '32px',
+                    },
+                    boxShadow: {
+                        'premium': '0 15px 40px rgba(0,0,0,0.08)',
+                        'card-float': '0 30px 60px rgba(0,0,0,0.12)',
                     }
                 }
             }
@@ -62,116 +62,89 @@
     </script>
     
     <style>
-        .gradient-text {
-            background: linear-gradient(135deg, #3b82f6, #2563eb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        :root {
+            --rich-black: #121217;
+            --soft-grey: #F6F7F9;
+            --border-light: rgba(0, 0, 0, 0.08);
+            --border-dark: rgba(255, 255, 255, 0.1);
         }
-        
-        .gradient-text-secondary {
-            background: linear-gradient(135deg, #3b82f6, #60a5fa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
+
+        body {
+            background-color: white;
+            color: var(--rich-black);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
+
+        .premium-shadow { box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+        .premium-shadow-large { box-shadow: 0 30px 60px rgba(0,0,0,0.12); }
         
-        .glass {
-            background: rgba(255, 255, 255, 0.1);
+        /* Navigation */
+        .nav-sticky {
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid var(--border-light);
+            transition: all 0.3s ease;
         }
-        
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+        /* Compact Section Spacing */
+        .section-padding { padding: 80px 0; }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-        }
-        
-        .font-archivo-black { font-family: 'Archivo Black', sans-serif; }
+
+        .animate-up { opacity: 0; }
         
         .hero-gradient {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 25%, #2563eb 50%, #3b82f6 75%, #60a5fa 100%);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
+            background: linear-gradient(135deg, #121217 0%, #1C1C22 100%);
         }
-        
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
     </style>
 </head>
 
-<body class="font-sans text-neutral-900">
+<body class="font-sans">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-neutral-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 sm:h-20">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="index.html" class="text-3xl sm:text-4xl font-bold font-archivo-black">
-                        <span class="text-black">Kraft</span><span class="text-orange-400">I</span><span class="text-orange-400">Q</span>
-                    </a>
-                </div>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">Home</a>
-                    <a href="index.html#about" class="text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">About</a>
-                    <a href="vision.html" class="text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">Vision</a>
-                    <a href="mission.html" class="text-primary-600 font-medium">Mission</a>
-                    <a href="index.html#services" class="text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">Services</a>
-                    <a href="index.html#portfolio" class="text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">Portfolio</a>
-                    <a href="index.html#contact" class="text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium">Contact</a>
-                </div>
-                
-                <!-- CTA Button -->
-                <div class="hidden md:block">
-                    <a href="index.html#contact" class="bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-700 transition-all duration-300">
-                        Get Started
-                    </a>
-                </div>
-                
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden text-neutral-700" id="mobile-menu-btn">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
+    <nav class="fixed top-0 w-full z-50 nav-sticky" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="assets/KraftIQLogo.png" alt="KraftIQ Logo" class="h-20 w-auto">
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Home</a>
+                <a href="about.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">About</a>
+                <a href="services.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Services</a>
+                <a href="products.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Products</a>
+                <a href="index.html#contact" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Contact</a>
             </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div class="mobile-menu md:hidden bg-white/95 backdrop-blur-lg hidden" id="mobile-menu">
-            <div class="px-4 py-6 space-y-4">
-                <a href="index.html" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Home</a>
-                <a href="index.html#about" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">About</a>
-                <a href="vision.html" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Vision</a>
-                <a href="mission.html" class="block text-primary-600 font-medium py-3">Mission</a>
-                <a href="index.html#services" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Services</a>
-                <a href="index.html#portfolio" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Portfolio</a>
-                <a href="index.html#contact" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium py-3">Contact</a>
-            </div>
+            
+            <a href="index.html#contact" class="bg-primary text-white px-6 py-2 rounded-full text-[13px] font-bold hover:scale-105 transition-transform">
+                Get Started
+            </a>
         </div>
     </nav>
 
     <!-- Mission Hero -->
-    <section class="hero-gradient pt-32 pb-20 text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-black/20"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8">
-                <i class="fas fa-bullseye text-white mr-3"></i>
-                <span class="text-white font-medium">Our Mission</span>
+    <section class="hero-gradient pt-32 pb-24 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="animate-up inline-flex items-center bg-white/5 backdrop-blur-sm rounded-full px-5 py-2 mb-8 border border-white/10">
+                <i class="fas fa-bullseye text-white/80 mr-3 text-sm"></i>
+                <span class="text-sm font-medium tracking-wide tracking-widest uppercase opacity-60">OUR MISSION</span>
             </div>
-            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-8">
-                Our <span class="gradient-text-secondary">Mission</span>
+            <h1 class="animate-up text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight">
+                Our <span class="text-neutral-400">Mission.</span>
             </h1>
-            <div class="max-w-4xl mx-auto">
-                <p class="text-2xl md:text-3xl font-light leading-relaxed mb-8">
+            <div class="animate-up max-w-3xl mx-auto">
+                <p class="text-xl md:text-2xl font-light leading-relaxed text-gray-300">
                     To empower businesses and educational institutions with innovative technology solutions that drive growth, efficiency, and success in the digital era.
                 </p>
             </div>
@@ -179,59 +152,57 @@
     </section>
 
     <!-- Mission Pillars -->
-    <section class="py-20 bg-neutral-50">
+    <section class="section-padding bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-6">
-                    Our Mission <span class="gradient-text">Pillars</span>
+            <div class="animate-up text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
+                    Our Mission Pillars
                 </h2>
-                <p class="text-lg text-neutral-600 max-w-3xl mx-auto">
-                    Four fundamental principles that guide our approach to technology and innovation.
-                </p>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Transform -->
-                <div class="card-hover bg-white rounded-2xl p-3 shadow-lg text-center">
-                    <div class="w-10 h-10 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                        <i class="fas fa-magic text-white text-base"></i>
+                <div class="animate-up bg-accent-grey rounded-3xl p-8 premium-shadow hover:translate-y-[-8px] transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-magic text-xl"></i>
                     </div>
-                    <h3 class="text-base font-bold text-neutral-900 mb-1">Transform</h3>
-                    <p class="text-neutral-600 text-xs">
-                        Converting complex challenges into elegant, user-friendly solutions.
+                    <h3 class="text-xl font-bold text-primary mb-3">Transform</h3>
+                    <p class="text-accent-muted leading-relaxed">
+                        Converting complex challenges into elegant, user-friendly solutions through rigorous engineering and creative design.
                     </p>
                 </div>
                 
                 <!-- Empower -->
-                <div class="card-hover bg-white rounded-2xl p-3 shadow-lg text-center">
-                    <div class="w-10 h-10 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                        <i class="fas fa-rocket text-white text-base"></i>
+                <div class="animate-up bg-accent-grey rounded-3xl p-8 premium-shadow hover:translate-y-[-8px] transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-rocket text-xl"></i>
                     </div>
-                    <h3 class="text-base font-bold text-neutral-900 mb-1">Empower</h3>
-                    <p class="text-neutral-600 text-xs">
-                        Enabling businesses to achieve their full potential through technology.
+                    <h3 class="text-xl font-bold text-primary mb-3">Empower</h3>
+                    <p class="text-accent-muted leading-relaxed">
+                        Enabling businesses to achieve their full potential by providing tools that scale with their growth and ambition.
                     </p>
                 </div>
                 
                 <!-- Innovate -->
-                <div class="card-hover bg-white rounded-2xl p-3 shadow-lg text-center">
-                    <div class="w-10 h-10 bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                        <i class="fas fa-lightbulb text-white text-base"></i>
+                <div class="animate-up bg-accent-grey rounded-3xl p-8 premium-shadow hover:translate-y-[-8px] transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-lightbulb text-xl"></i>
                     </div>
-                    <h3 class="text-base font-bold text-neutral-900 mb-1">Innovate</h3>
-                    <p class="text-neutral-600 text-xs">
-                        Pushing boundaries with cutting-edge technologies and creative solutions.
+                    <h3 class="text-xl font-bold text-primary mb-3">Innovate</h3>
+                    <p class="text-accent-muted leading-relaxed">
+                        Pushing technological boundaries with R&D-focused solutions that stay ahead of industry trends.
                     </p>
                 </div>
                 
                 <!-- Impact -->
-                <div class="card-hover bg-white rounded-2xl p-3 shadow-lg text-center">
-                    <div class="w-10 h-10 bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                        <i class="fas fa-globe text-white text-base"></i>
+                <div class="animate-up bg-accent-grey rounded-3xl p-8 premium-shadow hover:translate-y-[-8px] transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-globe text-xl"></i>
                     </div>
-                    <h3 class="text-base font-bold text-neutral-900 mb-1">Impact</h3>
-                    <p class="text-neutral-600 text-xs">
-                        Creating meaningful change that benefits businesses and society.
+                    <h3 class="text-xl font-bold text-primary mb-3">Impact</h3>
+                    <p class="text-accent-muted leading-relaxed">
+                        Creating meaningful, measurable change that benefits our clients, their customers, and the broader community.
                     </p>
                 </div>
             </div>
@@ -239,82 +210,75 @@
     </section>
 
     <!-- How We Deliver -->
-    <section class="py-20 bg-white">
+    <section class="section-padding bg-accent-grey">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <div class="inline-flex items-center bg-primary-50 rounded-full px-4 py-2 mb-6">
-                        <i class="fas fa-cogs text-primary-500 mr-2"></i>
-                        <span class="text-primary-700 font-medium text-sm">Our Approach</span>
+                <div class="animate-up">
+                    <div class="inline-flex items-center bg-primary/5 rounded-full px-4 py-2 mb-6">
+                        <i class="fas fa-cogs text-primary mr-2 text-sm"></i>
+                        <span class="text-primary font-semibold text-xs tracking-widest uppercase">Our Approach</span>
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-6">
-                        How We Deliver <span class="gradient-text">Excellence</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
+                        How We Deliver Excellence
                     </h2>
-                    <p class="text-lg text-neutral-600 mb-8">
-                        Our mission-driven approach ensures every project delivers maximum value and lasting impact.
+                    <p class="text-lg text-accent-muted mb-8 leading-relaxed">
+                        Our mission-driven approach ensures every project delivers maximum value and lasting impact through a structured methodology.
                     </p>
                     
                     <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center mt-1">
-                                <span class="text-white text-sm font-bold">1</span>
-                            </div>
+                        <div class="flex items-start space-x-5 group">
+                            <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold group-hover:scale-110 transition-transform">1</div>
                             <div>
-                                <h4 class="font-semibold text-neutral-900 mb-2">Deep Understanding</h4>
-                                <p class="text-neutral-600">We immerse ourselves in your business to understand unique challenges and opportunities.</p>
+                                <h4 class="text-lg font-bold text-primary mb-1">Deep Understanding</h4>
+                                <p class="text-accent-muted">We immerse ourselves in your business ecosystem to identify core challenges and strategic goals.</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center mt-1">
-                                <span class="text-white text-sm font-bold">2</span>
-                            </div>
+                        <div class="flex items-start space-x-5 group">
+                            <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold group-hover:scale-110 transition-transform">2</div>
                             <div>
-                                <h4 class="font-semibold text-neutral-900 mb-2">Strategic Innovation</h4>
-                                <p class="text-neutral-600">We apply cutting-edge technologies strategically to maximize business impact.</p>
+                                <h4 class="text-lg font-bold text-primary mb-1">Strategic Innovation</h4>
+                                <p class="text-accent-muted">Applying the right technology at the right time to solve specific problems and drive efficiency.</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center mt-1">
-                                <span class="text-white text-sm font-bold">3</span>
-                            </div>
+                        <div class="flex items-start space-x-5 group">
+                            <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold group-hover:scale-110 transition-transform">3</div>
                             <div>
-                                <h4 class="font-semibold text-neutral-900 mb-2">Continuous Partnership</h4>
-                                <p class="text-neutral-600">We maintain long-term relationships, evolving solutions as your business grows.</p>
+                                <h4 class="text-lg font-bold text-primary mb-1">Continuous Partnership</h4>
+                                <p class="text-accent-muted">We don't just deliver and disappear; we maintain long-term relationships to ensure sustained success.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="relative">
-                    <div class="relative z-10">
+                <div class="animate-up relative">
+                    <div class="relative z-10 rounded-3xl overflow-hidden premium-shadow-large">
                         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Team Collaboration" 
-                             class="rounded-2xl shadow-2xl w-full h-96 object-cover">
+                             class="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="absolute -top-6 -left-6 w-full h-full bg-gradient-to-r from-primary-500/20 to-primary-600/20 rounded-2xl -z-10"></div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Call to Action -->
-    <section class="py-20 bg-neutral-900 text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-primary-900/20 to-neutral-900/20"></div>
+    <section class="section-padding bg-primary text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">
+            <h2 class="animate-up text-4xl md:text-5xl font-serif font-bold mb-8">
                 Ready to Transform Your Ideas?
             </h2>
-            <p class="text-xl text-neutral-300 mb-8 max-w-3xl mx-auto">
-                Let's work together to turn your vision into reality. Our mission-driven approach ensures 
-                your success is our priority.
+            <p class="animate-up text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                Let's work together to turn your vision into reality. Our mission-driven approach ensures your success is our priority.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="index.html#contact" class="bg-primary-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-primary-600 transition-all duration-300">
+            <div class="animate-up flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact" class="bg-white text-primary px-10 py-4 rounded-full font-bold hover:bg-opacity-90 transition-all">
                     Start Your Journey
                 </a>
-                <a href="vision.html" class="glass text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300">
+                <a href="vision.html" class="border border-white/20 text-white px-10 py-4 rounded-full font-bold hover:bg-white/5 transition-all">
                     Explore Our Vision
                 </a>
             </div>
@@ -322,36 +286,84 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-neutral-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="flex items-center mb-4 md:mb-0">
-                    <span class="text-2xl font-bold font-archivo-black">
-                        <span class="text-black">Kraft</span><span class="text-orange-400">I</span><span class="text-orange-400">Q</span>
-                    </span>
+    <footer class="bg-[#050507] pt-24 pb-12 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-4 gap-16 mb-20">
+                <div class="md:col-span-2">
+                    <img src="assets/KraftIQLogo.png" alt="KraftIQ" class="h-16 mb-8 brightness-0 invert opacity-80">
+                    <p class="text-neutral-500 text-sm max-w-sm mb-8 leading-relaxed">
+                        KraftIQ is a premier digital engineering studio dedicated to architecting high-performance ecosystems. We transform complex challenges into scalable technological realities.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all border border-white/5">
+                            <i class="fab fa-linkedin-in text-sm"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all border border-white/5">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all border border-white/5">
+                            <i class="fab fa-github text-sm"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="text-neutral-400 text-sm">
-                    © 2024 KraftIQ. All rights reserved.
+                
+                <div>
+                    <h5 class="text-[10px] font-bold uppercase tracking-widest mb-8 text-white/20">Navigation</h5>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-sm text-neutral-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-sm text-neutral-400 hover:text-white transition-colors">Engineering Studio</a></li>
+                        <li><a href="services.html" class="text-sm text-neutral-400 hover:text-white transition-colors">Capabilities</a></li>
+                        <li><a href="products.html" class="text-sm text-neutral-400 hover:text-white transition-colors">Product Ecosystem</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="text-[10px] font-bold uppercase tracking-widest mb-8 text-white/20">Contact</h5>
+                    <ul class="space-y-4">
+                        <li class="text-sm text-neutral-400">basavarajkasbi@gmail.com</li>
+                        <li class="text-sm text-neutral-400">+91-7019293597</li>
+                        <li class="text-sm text-neutral-400">Bangalore, India</li>
+                    </ul>
                 </div>
             </div>
+            
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-[10px] font-bold uppercase tracking-widest text-white/10">
+                    © 2026 KraftIQ Technologies. All rights reserved.
+                </div>
+                <div class="flex space-x-8">
+                    <a href="#" class="text-[9px] font-bold uppercase tracking-widest text-white/10 hover:text-white/40 transition-colors">Privacy Protocol</a>
+                    <a href="#" class="text-[9px] font-bold uppercase tracking-widest text-white/10 hover:text-white/40 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative background text -->
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-bold text-white/[0.02] whitespace-nowrap pointer-events-none select-none leading-none -mb-[5vw]">
+            KRAFTIQ
         </div>
     </footer>
 
     <!-- Scripts -->
     <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            
-            const icon = mobileMenuBtn.querySelector('i');
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.className = 'fas fa-bars text-xl';
-            } else {
-                icon.className = 'fas fa-times text-xl';
-            }
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.querySelectorAll('.animate-up').forEach((el) => {
+            gsap.fromTo(el, 
+                { opacity: 0, y: 30 },
+                { 
+                    opacity: 1, 
+                    y: 0, 
+                    duration: 1,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                        toggleActions: "play none none none"
+                    }
+                }
+            );
         });
     </script>
 </body>
