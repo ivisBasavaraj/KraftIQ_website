@@ -164,12 +164,14 @@
                     </p>
                 </div>
                 <div class="relative animate-up">
-                    <div class="rounded-3xl overflow-hidden premium-shadow">
-                        <img src="assets/1723536372073.jpg" alt="KraftIQ Team" class="w-full h-[400px] object-cover">
+                    <div class="rounded-3xl overflow-hidden premium-shadow bg-neutral-100 border border-neutral-200">
+                        <!-- 3D AI Animation Container -->
+                        <div id="ai-canvas-container" class="w-full h-[400px] relative"></div>
                     </div>
-                    <div class="absolute -bottom-6 -right-6 bg-white p-8 rounded-2xl premium-shadow max-w-[240px] hidden md:block border border-neutral-100">
-                        <h3 class="text-xl font-bold mb-2 font-serif">Innovation at Heart</h3>
-                        <p class="text-xs text-neutral-500 uppercase tracking-wider font-bold opacity-60">Building the future</p>
+                    <!-- Decorative Floating Card -->
+                    <div class="absolute -bottom-6 -right-6 bg-white p-8 rounded-2xl premium-shadow max-w-[240px] hidden md:block border border-neutral-100 z-10">
+                        <h3 class="text-xl font-bold mb-2 font-serif">Neural Networks</h3>
+                        <p class="text-xs text-neutral-500 uppercase tracking-wider font-bold opacity-60">Powering Intelligence</p>
                     </div>
                 </div>
             </div>
@@ -413,5 +415,8 @@
             }
         });
     </script>
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="assets/js/ai-animation.js"></script>
 </body>
 </html>

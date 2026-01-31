@@ -30,6 +30,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="assets/js/3d-animation.js"></script>
+    <script src="assets/js/code-animation.js"></script>
+    
     <script>
         tailwind.config = {
             theme: {
@@ -91,27 +96,31 @@
         }
 
         .nav-sticky-scrolled {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-light);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
         }
 
         /* Hero Layout - More Compact */
         .hero-section {
             padding-top: 110px;
             padding-bottom: 70px;
-            background: radial-gradient(circle at top right, rgba(18, 18, 23, 0.02), transparent);
+            background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03), transparent 40%),
+                        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.02), transparent 40%);
         }
 
-        .debit-card {
-            background: linear-gradient(135deg, #2B2B31 0%, #121217 100%);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 20px;
-            padding: 24px;
+        .tech-panel {
+            background: rgba(20, 20, 25, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 28px;
             color: white;
             position: relative;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+            box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
             transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
@@ -141,6 +150,11 @@
 
         .animate-up { opacity: 0; animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
         
+        .card-hover-glow:hover {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12), 0 0 20px rgba(18, 18, 23, 0.05);
+            border-color: rgba(18, 18, 23, 0.1);
+        }
+
         /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 5px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
@@ -151,26 +165,40 @@
             .experience-overlap { margin-top: 30px; }
             .section-padding { padding: 60px 0; }
         }
+
+        /* Carousel Animation */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-33.33%); }
+        }
+        
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+        
+        .pause-scroll {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 
 <body class="font-sans">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 nav-sticky" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between">
             <a href="index.html" class="flex items-center">
-                <img src="assets/KraftIQLogo.png" alt="KraftIQ Logo" class="h-20 w-auto">
+                <img src="assets/KraftIQLogo.png" alt="KraftIQ Logo" class="h-44 w-auto">
             </a>
             
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#home" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Home</a>
-                <a href="about.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">About</a>
-                <a href="services.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Services</a>
-                <a href="products.html" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Products</a>
-                <a href="#contact" class="text-[13px] font-semibold hover:opacity-50 transition-opacity">Contact</a>
+                <a href="#home" class="text-sm font-medium hover:text-primary transition-colors">Home</a>
+                <a href="about.html" class="text-sm font-medium hover:text-primary transition-colors">About</a>
+                <a href="services.html" class="text-sm font-medium hover:text-primary transition-colors">Services</a>
+                <a href="products.html" class="text-sm font-medium hover:text-primary transition-colors">Products</a>
+                <a href="#contact" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
             </div>
             
-            <a href="#contact" class="bg-primary text-white px-6 py-2 rounded-full text-[13px] font-bold hover:scale-105 transition-transform">
+            <a href="#contact" class="bg-primary text-white px-7 py-3 rounded-full text-xs font-bold uppercase tracking-wider hover:scale-105 transition-all shadow-lg hover:shadow-xl">
                 Get Started
             </a>
         </div>
@@ -181,73 +209,33 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="animate-up">
-                    <div class="inline-flex items-center space-x-2 bg-neutral-100 rounded-full px-3 py-1 mb-6">
-                        <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
-                        <span class="text-[9px] font-bold tracking-widest uppercase opacity-60">Pioneering Digital Excellence</span>
+                    <div class="inline-flex items-center space-x-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-8 border border-neutral-200">
+                        <span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
+                        <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-neutral-600">Pioneering Digital Excellence</span>
                     </div>
-                    <h1 class="text-5xl md:text-7xl font-serif font-bold leading-[1.1] mb-6 tracking-tight">
-                        Engineering the <br> Digital Frontier.
+                    <h1 class="text-5xl md:text-7xl font-serif font-bold leading-[1.1] mb-8 tracking-tight text-primary">
+                        Engineering the <br> <span class="text-neutral-400">Digital Frontier.</span>
                     </h1>
-                    <p class="text-lg text-neutral-500 max-w-md mb-10 leading-relaxed">
+                    <p class="text-xl text-neutral-500 max-w-lg mb-12 leading-relaxed font-light">
                         KraftIQ delivers high-performance digital ecosystems. We transform complex business challenges into seamless, scalable technological realities.
                     </p>
-                    <div class="flex flex-wrap gap-3 lg:justify-start justify-center">
-                        <a href="#contact" class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-sm hover:translate-y-[-2px] transition-transform premium-shadow-large">
+                    <div class="flex flex-wrap gap-4 lg:justify-start justify-center">
+                        <a href="#contact" class="bg-primary text-white px-8 py-4 rounded-full font-bold text-sm hover:translate-y-[-2px] transition-transform shadow-xl hover:shadow-2xl">
                             Consult with Us
                         </a>
-                        <a href="services.html" class="px-8 py-4 rounded-xl font-bold text-sm border border-neutral-200 hover:bg-neutral-50 transition-colors">
+                        <a href="services.html" class="px-8 py-4 rounded-full font-bold text-sm border border-neutral-200 hover:bg-neutral-50 transition-colors bg-white">
                             Explore Solutions
                         </a>
                     </div>
                 </div>
                 
                 <div class="relative animate-up" style="animation-delay: 0.2s">
-                    <!-- Tech Platform Visualization Card -->
-                    <div class="debit-card w-full max-w-[400px] ml-auto overflow-hidden">
-                        <div class="flex justify-between items-start mb-12">
-                            <div class="text-xl font-bold tracking-tight">KraftIQ Cloud</div>
-                            <div class="w-10 h-7 bg-white/10 rounded flex items-center justify-center">
-                                <i class="fas fa-microchip text-[12px] opacity-60"></i>
-                            </div>
-                        </div>
-                        <div class="space-y-6">
-                            <div class="flex items-center space-x-4">
-                                <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
-                                    <div class="bg-white/40 h-full w-[75%]"></div>
-                                </div>
-                                <span class="text-[10px] font-mono opacity-60">75%</span>
-                            </div>
-                            <div class="flex space-x-10">
-                                <div>
-                                    <div class="text-[9px] uppercase opacity-40 mb-0.5 font-bold">Node Status</div>
-                                    <div class="text-[13px] font-semibold flex items-center">
-                                        <span class="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
-                                        Active
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="text-[9px] uppercase opacity-40 mb-0.5 font-bold">Latency</div>
-                                    <div class="text-[13px] font-semibold">12ms</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Abstract circuit pattern overlay -->
-                        <div class="absolute top-0 right-0 w-32 h-32 opacity-10 pointer-events-none">
-                            <i class="fas fa-project-diagram text-8xl -mr-10 -mt-10"></i>
-                        </div>
-                    </div>
+                    <!-- 3D Animation Background -->
+                    <div id="canvas-container" class="absolute -top-64 -right-10 w-[600px] h-[600px] -z-10 pointer-events-none opacity-40"></div>
+
+
                     
-                    <div class="payment-card absolute -bottom-8 -left-2 w-64 hidden lg:block animate-up" style="animation-delay: 0.5s">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center">
-                                <i class="fas fa-brain text-sm"></i>
-                            </div>
-                            <div>
-                                <div class="text-[9px] text-neutral-400 font-bold uppercase tracking-wider">Neural Engine</div>
-                                <div class="text-base font-bold">Optimized</div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -257,8 +245,8 @@
     <section class="experience-overlap">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white p-8 rounded-[28px] premium-shadow border border-neutral-50 hover:translate-y-[-6px] transition-transform duration-500">
-                    <div class="w-12 h-12 bg-neutral-50 rounded-xl flex items-center justify-center mb-6 text-primary">
+                <div class="bg-white p-8 rounded-[28px] premium-shadow border border-neutral-50 card-hover-glow hover:translate-y-[-6px] transition-all duration-500">
+                    <div class="w-12 h-12 bg-neutral-50 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                         <i class="fas fa-layer-group text-xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3 tracking-tight">Enterprise Scalability</h3>
@@ -266,8 +254,8 @@
                         Architectures engineered for growth, leveraging cloud-native technologies for high availability and elastic performance.
                     </p>
                 </div>
-                <div class="bg-white p-8 rounded-[28px] premium-shadow border border-neutral-50 hover:translate-y-[-6px] transition-transform duration-500">
-                    <div class="w-12 h-12 bg-neutral-50 rounded-xl flex items-center justify-center mb-6 text-primary">
+                <div class="bg-white p-8 rounded-[28px] premium-shadow border border-neutral-50 card-hover-glow hover:translate-y-[-6px] transition-all duration-500">
+                    <div class="w-12 h-12 bg-neutral-50 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                         <i class="fas fa-shield-halved text-xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3 tracking-tight">Security-First Focus</h3>
@@ -275,8 +263,8 @@
                         Rigorous security protocols, including zero-trust architectures and advanced encryption, to protect your critical digital assets.
                     </p>
                 </div>
-                <div class="bg-white p-8 rounded-[28px] premium-shadow border border-neutral-50 hover:translate-y-[-6px] transition-transform duration-500">
-                    <div class="w-12 h-12 bg-neutral-50 rounded-xl flex items-center justify-center mb-6 text-primary">
+                <div class="bg-white p-8 rounded-[28px] premium-shadow border border-neutral-50 card-hover-glow hover:translate-y-[-6px] transition-all duration-500">
+                    <div class="w-12 h-12 bg-neutral-50 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                         <i class="fas fa-microchip text-xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3 tracking-tight">Cognitive Engineering</h3>
@@ -291,13 +279,13 @@
     <!-- Dark Steps Section -->
     <section class="section-padding bg-primary text-white mt-24 rounded-[40px] mx-4">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12 items-end mb-16">
+            <div class="grid lg:grid-cols-2 gap-12 items-end mb-20">
                 <div>
-                    <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">Execution is the <br> Ultimate Differentiator.</h2>
-                    <p class="text-neutral-400 text-sm max-w-sm">We adhere to a rigorous, systematic methodology to ensure every line of code translates into tangible business value.</p>
+                    <h2 class="text-4xl md:text-6xl font-serif font-bold mb-8 leading-[0.9]">Execution is the <br> <span class="opacity-40">Ultimate Differentiator.</span></h2>
+                    <p class="text-neutral-400 text-base max-w-md font-light leading-relaxed">We adhere to a rigorous, systematic methodology to ensure every line of code translates into tangible business value.</p>
                 </div>
                 <div class="flex justify-end lg:pb-2">
-                    <a href="#contact" class="text-sm font-bold border-b-2 border-white/20 pb-1 hover:border-white transition-colors">Initiate Project Discovery</a>
+                    <a href="#contact" class="text-sm font-bold border-b border-white/20 pb-1 hover:border-white transition-colors tracking-wide uppercase text-xs">Initiate Project Discovery</a>
                 </div>
             </div>
             
@@ -416,12 +404,12 @@
                             </a>
                         </div>
                     </div>
-                    <!-- Decorative element -->
-                    <div class="absolute bottom-0 right-0 w-64 h-64 bg-neutral-50 rounded-tl-full opacity-40 pointer-events-none translate-x-10 translate-y-10 group-hover:scale-110 transition-transform duration-700"></div>
+                    <!-- Decorative element / Code Animation -->
+                    <div id="code-canvas-container" class="absolute bottom-0 right-0 w-[400px] h-[400px] opacity-60 pointer-events-none translate-x-10 translate-y-10 group-hover:scale-105 transition-transform duration-700"></div>
                 </div>
 
                 <!-- Secondary Card: AI & Data -->
-                <div class="md:col-span-6 lg:col-span-4 bg-primary text-white p-10 rounded-[32px] premium-shadow-large group relative overflow-hidden">
+                <div class="md:col-span-6 lg:col-span-4 bg-gradient-to-br from-primary to-[#050508] text-white p-10 rounded-[32px] premium-shadow-large group relative overflow-hidden">
                     <div class="relative z-10">
                         <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8">
                             <i class="fas fa-brain text-2xl"></i>
@@ -488,14 +476,14 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-12 items-end mb-16">
                 <div>
-                    <div class="inline-flex items-center space-x-2 bg-neutral-100 rounded-full px-3 py-1 mb-6">
+                    <div class="inline-flex items-center space-x-2 bg-neutral-100 rounded-full px-4 py-1.5 mb-8 border border-neutral-200">
                         <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
-                        <span class="text-[9px] font-bold tracking-widest uppercase opacity-60">Engineered Solutions</span>
+                        <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-neutral-600">Engineered Solutions</span>
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-serif font-bold tracking-tight">Our Products.</h2>
+                    <h2 class="text-4xl md:text-6xl font-serif font-bold tracking-tight">Our <span class="text-neutral-400">Products.</span></h2>
                 </div>
                 <div class="lg:text-right">
-                    <p class="text-neutral-500 text-sm max-w-xs ml-auto leading-relaxed">
+                    <p class="text-neutral-500 text-lg max-w-sm ml-auto leading-relaxed font-light">
                         Battle-tested enterprise platforms ready for immediate integration and scaling.
                     </p>
                 </div>
@@ -657,14 +645,35 @@
             </div>
             
             <div class="mt-24 pt-12 border-t border-white/5">
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-12 items-center opacity-40 grayscale brightness-200 hover:grayscale-0 transition-all duration-700">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpV0qrXYI4gBF7wyMH7poAegD4eC3jpEKJmQ&s" class="h-6 object-contain mx-auto" alt="BIEC">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/IMTMA.png" class="h-5 object-contain mx-auto" alt="IMTMA">
-                    <img src="https://iqnaax.com/images/671b713bda345IQNAAX%20Logo.png" class="h-5 object-contain mx-auto" alt="IQNAAX">
-                    <img src="https://thestemroboai.com/logo_carousel.b92bf2a2.png" class="h-8 object-contain mx-auto" alt="STEMROBO">
-                    <img src="assets/HKL_Logo.png" class="h-5 object-contain mx-auto" alt="HKL">
-                    <img src="assets/environi logo.png" class="h-6 object-contain mx-auto" alt="Environi">
-                    <img src="assets/LOGO OF RN.jpg" class="h-6 object-contain mx-auto" alt="RN">
+                <div class="overflow-hidden bg-white/5 rounded-2xl py-6 relative">
+                    <div class="flex items-center space-x-12 animate-scroll w-max hover:pause-scroll">
+                        <!-- First Set of Logos -->
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpV0qrXYI4gBF7wyMH7poAegD4eC3jpEKJmQ&s" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="BIEC">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/IMTMA.png" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="IMTMA">
+                        <img src="https://iqnaax.com/images/671b713bda345IQNAAX%20Logo.png" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="IQNAAX">
+                        <img src="https://thestemroboai.com/logo_carousel.b92bf2a2.png" class="h-10 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="STEMROBO">
+                        <img src="assets/HKL_Logo.png" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="HKL">
+                        <img src="assets/environi logo.png" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="Environi">
+                        <img src="assets/LOGO OF RN.jpg" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="RN">
+                        
+                        <!-- Duplicate Set for Seamless Loop -->
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpV0qrXYI4gBF7wyMH7poAegD4eC3jpEKJmQ&s" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="BIEC">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/IMTMA.png" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="IMTMA">
+                        <img src="https://iqnaax.com/images/671b713bda345IQNAAX%20Logo.png" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="IQNAAX">
+                        <img src="https://thestemroboai.com/logo_carousel.b92bf2a2.png" class="h-10 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="STEMROBO">
+                        <img src="assets/HKL_Logo.png" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="HKL">
+                        <img src="assets/environi logo.png" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="Environi">
+                        <img src="assets/LOGO OF RN.jpg" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="RN">
+                        
+                        <!-- Triplicate Set for Seamless Loop (extra buffer) -->
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpV0qrXYI4gBF7wyMH7poAegD4eC3jpEKJmQ&s" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="BIEC">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/IMTMA.png" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="IMTMA">
+                        <img src="https://iqnaax.com/images/671b713bda345IQNAAX%20Logo.png" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="IQNAAX">
+                        <img src="https://thestemroboai.com/logo_carousel.b92bf2a2.png" class="h-10 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="STEMROBO">
+                        <img src="assets/HKL_Logo.png" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="HKL">
+                        <img src="assets/environi logo.png" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="Environi">
+                        <img src="assets/LOGO OF RN.jpg" class="h-8 object-contain grayscale brightness-200 hover:grayscale-0 transition-all duration-300" alt="RN">
+                    </div>
                 </div>
             </div>
         </div>
@@ -871,7 +880,7 @@
         });
 
         // Interactive card tilt
-        const card = document.querySelector('.debit-card');
+        const card = document.querySelector('.tech-panel');
         if(card) {
             document.addEventListener('mousemove', (e) => {
                 const xAxis = (window.innerWidth / 2 - e.pageX) / 40;
